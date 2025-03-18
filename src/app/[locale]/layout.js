@@ -4,6 +4,7 @@ import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Link } from '@/i18n/navigation';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 import './globals.css';
 
@@ -63,9 +64,7 @@ export default async function LocaleLayout({
 										</Link>
 									</li>
 									<li>
-										<Link href="/" locale={locale === 'ua' ? 'en' : 'ua'}>
-											{locale === 'ua' ? 'EN' : 'UA'}
-										</Link>
+										<LanguageSwitcher locale={locale} />
 									</li>
 								</ul>
 							</div>
