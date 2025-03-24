@@ -1,0 +1,136 @@
+section.hero {
+	.hero__row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	h1 {
+		font-size: 64px;
+		text-align: center;
+		margin: 40px auto 30px auto;
+		max-width: 900px;
+	}
+
+	.hero__marks {
+		margin: 30px 0 40px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			font-size: 20px;
+			p {
+				font-weight: 600;
+			}
+			span {
+				font-weight: 400;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.hero__call-form {
+		width: fit-content;
+		margin: 40px auto 40px auto;
+	}
+
+	.hero__slider {
+		max-width: 1600px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.hero__slider-swiper {
+		.swiper-slide {
+			width: fit-content;
+		}
+		img {
+			object-fit: cover;
+			display: block;
+			margin: 0 auto;
+			border-radius: 6px;
+		}
+	}
+	.hero__slider-mobile {
+		display: none;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	section.hero {
+		h1 {
+			font-size: 48px;
+			max-width: 700px;
+		}
+
+		.hero__marks {
+			gap: 25px;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	section.hero {
+		padding: 30px 0;
+		h1 {
+			font-size: 32px;
+			max-width: 500px;
+			font-weight: 600;
+			margin: 30px auto 20px auto;
+		}
+
+		.hero__marks {
+			margin: 20px 0 30px 0;
+			flex-direction: column;
+			gap: 6px;
+		}
+
+		.hero__row {
+			flex-direction: column-reverse;
+		}
+		.hero__slider-pc {
+			display: none;
+		}
+		.hero__slider-mobile {
+			display: block;
+			.swiper-slide {
+				border-radius: 8px;
+				overflow: hidden;
+			}
+		}
+		.hero__call-form {
+			width: 100%;
+			max-width: 400px;
+			text-align: center;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media all and (max-width: 438px) {
+	section.hero {
+		padding: 30px 0;
+		h1 {
+			font-size: 26px;
+			max-width: 500px;
+			font-weight: 600;
+			margin: 30px auto 20px auto;
+		}
+		.hero__marks {
+			&-item {
+				font-size: 16px;
+				p {
+					font-weight: 600;
+				}
+				span {
+					font-weight: 400;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

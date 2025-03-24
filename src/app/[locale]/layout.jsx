@@ -2,20 +2,19 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { Link } from '@/i18n/navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Header from '@/components/Header/Header';
+import { ModalProvider } from '@/components/Modal/Modal';
 
 import './globals.css';
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
+const montserrat = Montserrat({
+	variable: "--font-montserrat",
+	subsets: ["latin", "cyrillic"], // включаємо cyrillic для української локалізації
+	weight: ["300", "400", "500", "700"], // ви можете обрати потрібні вам ваги
+	display: "swap",
 });
 
 // Генерація статичних параметрів для локалей
@@ -44,35 +43,12 @@ export default async function LocaleLayout({
 
 	return (
 		<html lang={locale}>
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
+			<body className={montserrat.variable}>
 				<NextIntlClientProvider locale={locale} messages={messages}>
-					<header>
-						<nav className="p-4 bg-gray-100 dark:bg-gray-800">
-							<div className="container mx-auto flex justify-between items-center">
-								<Link href="/">
-									<span className="text-xl font-bold">Logo</span>
-								</Link>
-								<ul className="flex space-x-4">
-									<li>
-										<Link href="/">
-											{locale === 'ua' ? 'Головна' : 'Home'}
-										</Link>
-									</li>
-									<li>
-										<Link href="/about">
-											{locale === 'ua' ? 'Про нас' : 'About'}
-										</Link>
-									</li>
-									<li>
-										<LanguageSwitcher locale={locale} />
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</header>
-					<div className="container mx-auto">
+					<ModalProvider>
+						<Header />
 						{children}
-					</div>
+					</ModalProvider>
 				</NextIntlClientProvider>
 			</body>
 		</html>
