@@ -36,8 +36,6 @@ export async function POST(request) {
 			messageText += `💬 Коментар: ${comment}\n`;
 		}
 
-		console.log(messageText);
-
 		// Надсилаємо текстове повідомлення
 		const messageResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
 			method: 'POST',
