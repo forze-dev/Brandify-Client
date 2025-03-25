@@ -38,7 +38,7 @@ const Header = () => {
 								<Link href="/" className="navigation__link">Головна</Link>
 							</li>
 							<li className="navigation__item">
-								<Dropdown dropLabel={"Товари"} dropList={[
+								<Dropdown withMarker={true} dropLabel={"Товари"} dropList={[
 									<Link href="/" className="dropdown-link">Бізнес-шкарпетки</Link>,
 									<Link href="/" className="dropdown-link">Корпоративні шкарпетки</Link>,
 									<Link href="/" className="dropdown-link">Спортивні шкарпетки</Link>,
@@ -47,7 +47,7 @@ const Header = () => {
 								]} />
 							</li>
 							<li className="navigation__item">
-								<Dropdown dropLabel={"Ресурси"} dropList={[
+								<Dropdown withMarker={true} dropLabel={"Ресурси"} dropList={[
 									<Link href="/" className="dropdown-link">Бізнес-шкарпетки</Link>,
 									<Link href="/" className="dropdown-link">Корпоративні шкарпетки</Link>,
 									<Link href="/" className="dropdown-link">Спортивні шкарпетки</Link>,
@@ -61,7 +61,7 @@ const Header = () => {
 							</li>
 
 							<li className="navigation__item">
-								<Dropdown dropLabel={"Про нас"} dropList={[
+								<Dropdown withMarker={true} dropLabel={"Про нас"} dropList={[
 									<Link href="/" className="dropdown-link">Бізнес-шкарпетки</Link>,
 									<Link href="/" className="dropdown-link">Корпоративні шкарпетки</Link>,
 									<Link href="/" className="dropdown-link">Спортивні шкарпетки</Link>,

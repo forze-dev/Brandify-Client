@@ -1,3 +1,6 @@
 .LanguageSwitcher {
 	margin-left: auto;
+	&__label {
+		text-transform: uppercase;
+	}
 }

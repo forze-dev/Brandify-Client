@@ -25,6 +25,29 @@ body {
 	font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow: auto;
+}
+
+body.fixed-body {
+	overflow: hidden;
+	padding-right: 8px;
+}
+
+@media (max-width: 1024px) and (pointer: coarse) {
+	body.fixed-body {
+		overflow: hidden;
+		padding-right: 0;
+	}
+}
+
+body::-webkit-scrollbar {
+	width: 8px;
+	background: var(--litegray);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--red);
+	width: 8px;
 }
 
 .container {

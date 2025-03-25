@@ -4,20 +4,19 @@ import { useState, useRef, useEffect } from "react";
 import "./Dropdown.scss"
 import Image from "next/image";
 
-const Dropdown = ({ dropLabel, dropList }) => {
+const Dropdown = ({ dropLabel, dropList, withMarker }) => {
 	const [open, setOpen] = useState(false);
 	const dropdownRef = useRef(null);
 
-	// Функція блокування/розблокування прокрутки
 	useEffect(() => {
 		if (open) {
-			document.body.style.overflow = "hidden"; // Забороняємо прокрутку
+			document.body.classList.add("fixed-body")
 		} else {
-			document.body.style.overflow = ""; // Відновлюємо прокрутку
+			document.body.classList.remove("fixed-body")
 		}
 
 		return () => {
-			document.body.style.overflow = ""; // При розмонтуванні повертаємо прокрутку
+			document.body.classList.remove("fixed-body")
 		};
 	}, [open]);
 
@@ -47,7 +46,7 @@ const Dropdown = ({ dropLabel, dropList }) => {
 			{open && (
 				<ul className="dropdown-menu">
 					{dropList.map((el, index) => (
-						<li key={index + "-" + dropLabel}>{el}</li> // Додаємо унікальний key
+						<li className={`dropdown-menu__item ${withMarker ? "with-marker" : ""}`} key={index + "-" + dropLabel}>{el}</li> // Додаємо унікальний key
 					))}
 				</ul>
 			)}
