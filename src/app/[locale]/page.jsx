@@ -1,5 +1,6 @@
 import { routing } from '@/i18n/routing';
 import Hero from "@/sections/home/Hero/Hero";
+import HowWeWork from '@/sections/home/HowWeWork/HowWeWork';
 
 // Генерація статичних параметрів для локалей
 export function generateStaticParams() {
@@ -23,6 +24,7 @@ export default function HomePage() {
 	return (
 		<main>
 			<Hero />
+			<HowWeWork />
 		</main>
 	);
 }

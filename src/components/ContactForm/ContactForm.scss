@@ -1,19 +1,54 @@
 .ContactForm {
-	width: 100%;
-	max-width: 600px;
+	width: fit-content;
 	margin: 0 auto;
-	padding: 20px;
+	color: var(--light);
+	padding: 40px 60px;
+
+	&__title {
+		padding: 0 10px;
+		margin-bottom: 40px;
+		h2 {
+			font-size: 32px;
+			text-align: center;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: 20px;
+			text-align: center;
+		}
+	}
 
 	.form {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 1rem;
+		max-width: 700px;
+		width: 100%;
+	}
+
+	.form-top__group {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.form-row {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.form-group {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+		width: 100%;
+		max-width: calc(350px - 0.5rem);
+
+		&.form-comment {
+			max-width: 100%;
+		}
 
 		label {
 			font-weight: 500;
@@ -27,12 +62,20 @@
 			border: 1px solid #ddd;
 			font-size: 16px;
 			transition: border-color 0.3s;
+			resize: none;
 
 			&:focus {
 				outline: none;
 				border-color: #2563eb;
 			}
 		}
+	}
+
+	.form-file label {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 6px;
 	}
 
 	.input-error {
@@ -46,17 +89,21 @@
 	}
 
 	.file-input {
-		padding: 10px 0;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
 	}
 
 	.file-info {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 8px 12px;
-		background-color: #f3f4f6;
+		border: 1px solid var(--litegray);
+		padding: 4px 8px;
 		border-radius: 4px;
-		margin-top: 8px;
 		font-size: 14px;
 	}
 
@@ -95,11 +142,34 @@
 	}
 
 	.error-message {
-		margin-top: 16px;
-		padding: 12px;
-		background-color: #fee2e2;
-		color: #b91c1c;
-		border-radius: 4px;
-		text-align: center;
+		color: var(--litered);
+		margin-top: -4px;
+		font-size: 14px;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.ContactForm {
+		padding: 20px 10px;
+
+		&__title {
+			margin-bottom: 20px;
+			h2 {
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		.form-group {
+			max-width: 100%;
+		}
+
+		label {
+			font-size: 12px;
+		}
 	}
 }

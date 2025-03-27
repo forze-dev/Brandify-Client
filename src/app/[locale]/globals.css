@@ -3,15 +3,18 @@
 	--dark: #000000;
 	--light: #ffffff;
 	--gray: #373737;
+	--middlegray: #585858;
 	--litegray: #cccccc;
 	--red: #d00000;
 	--litered: #ff0000;
+	--carddark: #212121;
 }
 
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -22,7 +25,6 @@ a {
 body {
 	color: var(--dark);
 	background: var(--light);
-	font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow: auto;
@@ -69,6 +71,10 @@ body::-webkit-scrollbar-thumb {
 	border: none;
 	height: 44px;
 	line-height: 44px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: center;
 }
 
 .btn:hover {

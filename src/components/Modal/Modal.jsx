@@ -1,6 +1,7 @@
 'use client';
-import { Modal as MuiModal, Box } from '@mui/material';
 import { createContext, useContext, useState } from 'react';
+import './Modal.scss'; // Подключаем SCSS файл
+import Image from 'next/image';
 
 const ModalContext = createContext();
 
@@ -15,7 +16,6 @@ export function ModalProvider({ children }) {
 
 	const closeModal = () => {
 		setIsOpen(false);
-		// Після закриття анімації очищаємо вміст
 		setTimeout(() => {
 			setModalContent(null);
 		}, 300);
@@ -24,29 +24,24 @@ export function ModalProvider({ children }) {
 	return (
 		<ModalContext.Provider value={{ openModal, closeModal }}>
 			{children}
-			<MuiModal
-				open={isOpen}
-				onClose={closeModal}
-				aria-labelledby="modal-title"
-				aria-describedby="modal-description"
-			>
-				<Box sx={{
-					position: 'absolute',
-					top: '50%',
-					left: '50%',
-					transform: 'translate(-50%, -50%)',
-					bgcolor: 'background.paper',
-					boxShadow: 24,
-					p: 4,
-					borderRadius: 2,
-					maxHeight: '80vh',
-					overflowY: 'auto',
-					maxWidth: '90vw',
-					width: 'auto',
-				}}>
-					{modalContent}
-				</Box>
-			</MuiModal>
+			{isOpen && (
+				<div
+					className="modal-overlay"
+					onClick={closeModal}
+				>
+					<div
+						className="modal-content"
+						onClick={(e) => e.stopPropagation()}
+						aria-labelledby="modal-title"
+						aria-describedby="modal-description"
+					>
+						{modalContent}
+						<button className="modal-close-btn" onClick={closeModal}>
+							<Image src={"/icons/cross.svg"} width={20} height={20} alt='x' />
+						</button>
+					</div>
+				</div>
+			)}
 		</ModalContext.Provider>
 	);
 }

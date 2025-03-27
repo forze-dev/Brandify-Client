@@ -7,19 +7,14 @@ import { Button } from '@mui/material';
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useModal } from "../Modal/Modal";
 import Dropdown from "@/ui/Dropdown/Dropdown";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Header = () => {
 	const [openedBurgerMenu, setOpenedBurgerMenu] = useState(false)
 	const { openModal, closeModal } = useModal();
 
 	const handleOpenModal = () => {
-		openModal(
-			<div>
-				<h2 id="modal-title">Заголовок модального вікна</h2>
-				<p id="modal-description">Це модальне вікно з довільним контентом.</p>
-				<Button onClick={closeModal}>Закрити</Button>
-			</div>
-		);
+		openModal(<ContactForm />);
 	};
 
 	return (
