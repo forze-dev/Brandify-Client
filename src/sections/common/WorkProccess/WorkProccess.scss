@@ -1,0 +1,21 @@
+section.WorkProccess {
+	h2 {
+		font-size: 40px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.WorkProccess__list {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media all and (max-width: 900px) {
+	section.WorkProccess {
+		h2 {
+			font-size: 28px;
+			margin-bottom: 40px;
+		}
+	}
+}

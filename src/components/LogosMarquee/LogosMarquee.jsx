@@ -95,7 +95,7 @@ const LogoMarquee = () => {
 							alt={logo.alt || 'Logo'}
 							width={150}
 							height={45}
-							style={{ width: 'auto', height: '45px' }}
+							style={{ width: 'auto', height: '45px', objectFit: "contain" }}
 						/>
 					</div>
 				))}

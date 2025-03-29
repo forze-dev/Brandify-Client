@@ -1,0 +1,114 @@
+.proccessCard {
+	padding: 20px 0;
+
+	h3 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	.proccessCard__content,
+	.proccessCard__image {
+		max-width: 400px;
+		width: 100%;
+		flex-shrink: 0;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	&.gray {
+		background: var(--grayLight);
+	}
+
+	&.gray figure {
+		transform: rotate(180deg);
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 50px;
+	}
+
+	&.gray &__wrapper {
+		flex-direction: row-reverse;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	.proccessCard {
+		padding: 20px 0;
+
+		h3 {
+			font-size: 24px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+
+		.proccessCard__content,
+		.proccessCard__image {
+			max-width: 300px;
+			flex-shrink: 0;
+			img {
+				width: 300px;
+				height: 265px;
+				object-fit: contain;
+			}
+		}
+
+		.proccessCard__content {
+			flex-shrink: 1;
+		}
+
+		&__wrapper {
+			gap: 20px;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.proccessCard {
+		padding: 20px 0 40px 0;
+
+		h3 {
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 16px;
+			text-align: center;
+		}
+
+		.proccessCard__content,
+		.proccessCard__image {
+			max-width: 100%;
+			flex-shrink: 1;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		figure {
+			display: none;
+		}
+
+		&__wrapper {
+			gap: 20px;
+			flex-direction: column;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		&.gray &__wrapper {
+			flex-direction: column;
+		}
+	}
+}

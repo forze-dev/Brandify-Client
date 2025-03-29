@@ -8,6 +8,8 @@
 	--red: #d00000;
 	--litered: #ff0000;
 	--carddark: #212121;
+	--shadowGray: 1px 1px 4px #cccccc;
+	--grayLight: #f9fafb;
 }
 
 * {
@@ -60,7 +62,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn {
 	background: var(--red);
-	color: white;
+	color: var(--light);
 	font-size: 18px;
 	font-weight: 500;
 	border-radius: 6px;
@@ -77,6 +79,25 @@ body::-webkit-scrollbar-thumb {
 	justify-content: center;
 }
 
+.btn-second {
+	background: var(--light);
+	color: var(--dark);
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 6px;
+	min-width: 170px;
+	padding: 0 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+	border: 1px solid var(--dark);
+	height: 44px;
+	line-height: 44px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: center;
+}
+
 .btn:hover {
 	background: var(--litered);
 }
@@ -84,4 +105,14 @@ body::-webkit-scrollbar-thumb {
 .logo a {
 	display: block;
 	height: 44px;
+}
+
+section {
+	margin: 120px 0;
+}
+
+@media all and (max-width: 768px) {
+	section {
+		margin: 80px 0;
+	}
 }
