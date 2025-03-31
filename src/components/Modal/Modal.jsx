@@ -1,5 +1,6 @@
 'use client';
 import { createContext, useContext, useState } from 'react';
+import { useEffect } from 'react';
 import './Modal.scss'; // Подключаем SCSS файл
 import Image from 'next/image';
 
@@ -8,6 +9,18 @@ const ModalContext = createContext();
 export function ModalProvider({ children }) {
 	const [modalContent, setModalContent] = useState(null);
 	const [isOpen, setIsOpen] = useState(false);
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add("fixed-body")
+		} else {
+			document.body.classList.remove("fixed-body")
+		}
+
+		return () => {
+			document.body.classList.remove("fixed-body")
+		};
+	}, [isOpen]);
 
 	const openModal = (content) => {
 		setModalContent(content);

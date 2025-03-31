@@ -41,7 +41,7 @@ const Dropdown = ({ dropLabel, dropList, withMarker }) => {
 		<div className="dropdown-wrapper" ref={dropdownRef}>
 			<button className="dropdown-button" onClick={() => setOpen((prev) => !prev)}>
 				<span>{dropLabel}</span>
-				<Image src={"/icons/arrow-label.svg"} width={10} height={10} alt=">" />
+				<Image src={"/icons/arrow-label.svg"} width={10} height={10} alt=">" className="dropdown-wrapper-label" />
 			</button>
 			{open && (
 				<ul className="dropdown-menu">

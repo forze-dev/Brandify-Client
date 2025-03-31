@@ -3,10 +3,9 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Montserrat } from 'next/font/google';
-import { Link } from '@/i18n/navigation';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Header from '@/components/Header/Header';
 import { ModalProvider } from '@/components/Modal/Modal';
+import Footer from '@/components/Footer/Footer';
 
 import './globals.css';
 
@@ -48,6 +47,7 @@ export default async function LocaleLayout({
 					<ModalProvider>
 						<Header />
 						{children}
+						<Footer />
 					</ModalProvider>
 				</NextIntlClientProvider>
 			</body>

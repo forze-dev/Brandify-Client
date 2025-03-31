@@ -32,9 +32,7 @@
 		max-width: 300px;
 		background: var(--light);
 		border-radius: 8px;
-		box-shadow:
-			0px 1px 2px var(--litegray),
-			0px -1px 2px var(--litegray);
+		box-shadow: var(--shadowDark);
 		padding: 16px;
 		display: flex;
 		flex-direction: column;

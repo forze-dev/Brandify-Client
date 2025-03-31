@@ -9,6 +9,8 @@
 	--litered: #ff0000;
 	--carddark: #212121;
 	--shadowGray: 1px 1px 4px #cccccc;
+	--shadowDark: 0px 4px 8px #cccccc, 0px -2px 6px #e1e1e1;
+	--shadowModal: 0px 1px 6px rgba(75, 75, 75, 0.43);
 	--grayLight: #f9fafb;
 }
 

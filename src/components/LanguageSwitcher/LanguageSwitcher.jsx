@@ -1,5 +1,5 @@
 'use client';
-import Dropdown from '@/ui/Dropdown/Dropdown';
+import Dropdown from '@/components/Dropdown/Dropdown';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
 import "./LanguageSwitcher.scss"

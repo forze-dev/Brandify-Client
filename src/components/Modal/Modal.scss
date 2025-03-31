@@ -33,6 +33,7 @@
 		max-width: 90vw;
 		width: auto;
 		animation: modalFadeIn 0.3s;
+		box-shadow: var(--shadowModal);
 	}
 
 	.modal-close-btn {

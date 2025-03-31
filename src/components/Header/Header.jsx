@@ -1,21 +1,27 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.scss";
 import Image from "next/image";
 import Link from 'next/link';
-import { Button } from '@mui/material';
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import { useModal } from "../Modal/Modal";
-import Dropdown from "@/ui/Dropdown/Dropdown";
-import ContactForm from "../ContactForm/ContactForm";
+import Navigation from "../Navigation/Navigation";
+import ContactButton from "../ContactButton/ContactButton";
 
 const Header = () => {
 	const [openedBurgerMenu, setOpenedBurgerMenu] = useState(false)
-	const { openModal, closeModal } = useModal();
 
-	const handleOpenModal = () => {
-		openModal(<ContactForm />);
-	};
+
+	useEffect(() => {
+		if (openedBurgerMenu) {
+			document.body.classList.add("fixed-body")
+		} else {
+			document.body.classList.remove("fixed-body")
+		}
+
+		return () => {
+			document.body.classList.remove("fixed-body")
+		};
+	}, [openedBurgerMenu]);
 
 	return (
 		<header>
@@ -28,56 +34,12 @@ const Header = () => {
 					</div>
 
 					<nav className={`navigation ${openedBurgerMenu ? "active" : ""}`}>
-						<ul className="navigation__list">
-							<li className="navigation__item">
-								<Link href="/" className="navigation__link">Головна</Link>
-							</li>
-							<li className="navigation__item">
-								<Dropdown withMarker={true} dropLabel={"Товари"} dropList={[
-									<Link href="/" className="dropdown-link">Бізнес-шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Корпоративні шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Спортивні шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Дитячі шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Всі категорії</Link>
-								]} />
-							</li>
-							<li className="navigation__item">
-								<Dropdown withMarker={true} dropLabel={"Ресурси"} dropList={[
-									<Link href="/" className="dropdown-link">Бізнес-шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Корпоративні шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Спортивні шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Дитячі шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Всі категорії</Link>
-								]} />
-							</li>
-
-							<li className="navigation__item">
-								<Link href="/" className="navigation__link">Відгуки</Link>
-							</li>
-
-							<li className="navigation__item">
-								<Dropdown withMarker={true} dropLabel={"Про нас"} dropList={[
-									<Link href="/" className="dropdown-link">Бізнес-шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Корпоративні шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Спортивні шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Дитячі шкарпетки</Link>,
-									<Link href="/" className="dropdown-link">Всі категорії</Link>
-								]} />
-							</li>
-
-							<li className="navigation__item">
-								<Link href="/" className="navigation__link">Наші роботи</Link>
-							</li>
-
-							<li className="navigation__item">
-								<Link href="/" className="navigation__link">Співпраця</Link>
-							</li>
-						</ul>
+						<Navigation />
 					</nav>
 
 					<LanguageSwitcher />
 
-					<button className="btn header__action-btn" onClick={handleOpenModal}>Зв’язатися</button>
+					<ContactButton text={"Зв’язатися"} classList={"btn header__action-btn"} />
 
 					<button className={`header__burger ${openedBurgerMenu ? "active" : ""}`} onClick={() => setOpenedBurgerMenu(prev => !prev)}>
 						<figure></figure>

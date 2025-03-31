@@ -5,16 +5,10 @@ import 'swiper/css';
 import Image from "next/image"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
-import ContactForm from "@/components/ContactForm/ContactForm";
-import { useModal } from "@/components/Modal/Modal";
 import LogoMarquee from "@/components/LogosMarquee/LogosMarquee";
+import ContactButton from "@/components/ContactButton/ContactButton";
 
 const Hero = () => {
-	const { openModal, closeModal } = useModal();
-
-	const handleOpenModal = () => {
-		openModal(<ContactForm />);
-	};
 
 	return (
 		<section className="hero">
@@ -43,9 +37,7 @@ const Hero = () => {
 							</div>
 						</div>
 
-						<div className="btn hero__call-form" onClick={handleOpenModal}>
-							Оформити замовлення
-						</div>
+						<ContactButton text={"Оформити замовлення"} classList={"btn hero__call-form"} />
 					</div>
 				</div>
 				<div className="hero__slider-mobile">
