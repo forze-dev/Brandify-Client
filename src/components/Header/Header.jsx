@@ -6,10 +6,12 @@ import Link from 'next/link';
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import Navigation from "../Navigation/Navigation";
 import ContactButton from "../ContactButton/ContactButton";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
 	const [openedBurgerMenu, setOpenedBurgerMenu] = useState(false)
 
+	const { } = useTranslations()
 
 	useEffect(() => {
 		if (openedBurgerMenu) {
