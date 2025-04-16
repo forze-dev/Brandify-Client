@@ -1,47 +1,308 @@
 {
-	"HomePage": {
-		"title": "Hello world!",
-		"about": "Go to about page",
-		"lastUpdated": "Last updated"
-	},
-	"AboutPage": {
-		"title": "About Us",
-		"description": "This is the about us page. This content is statically generated (SSG).",
-		"additionalInfo": "This page demonstrates the use of static generation for multilingual content."
-	},
-	"Navigation": {
-		"home": "Home",
-		"about": "About",
-		"switchTo": "Switch to",
-		"logo": "Logo"
-	},
-	"Common": {
-		"backToHome": "Back to home",
-		"language": "Language",
-		"ukrainian": "Ukrainian",
-		"english": "English",
-		"loading": "Loading..."
-	},
-	"NotFound": {
-		"title": "404 - Page Not Found",
-		"description": "Sorry, the page you are looking for does not exist.",
-		"returnHome": "Return to homepage"
-	},
-	"Error": {
-		"title": "Something went wrong!",
-		"description": "An error occurred while loading the page.",
-		"retry": "Try again"
-	},
-	"SEO": {
-		"defaultTitle": "Multilingual Website",
-		"defaultDescription": "A multilingual website built with Next.js",
-		"home": {
-			"title": "Home Page",
-			"description": "Welcome to our multilingual website"
+	"form": {
+		"title": "Contact Us",
+		"subtitle": "Please fill out the form below to get in touch with us",
+		"place": {
+			"p1": "Last Name",
+			"p2": "First Name",
+			"p3": "Phone Number",
+			"p4": "Email",
+			"p5": "Comment"
 		},
-		"about": {
-			"title": "About Us",
-			"description": "Information about our website and team"
+		"errors": {
+			"lastName": "Last name is required",
+			"firstName": "First name is required",
+			"phone": "Phone number is required",
+			"phoneFormat": "Please enter a valid phone number",
+			"email": "Email is required",
+			"emailFormat": "Please enter a valid email address",
+			"fileSize": "File is too large. Maximum file size: 5MB",
+			"serverError": "Server error:"
+		},
+		"file": "Attach file (up to 5MB)",
+		"confirm": "I consent to the use of my personal data",
+		"button": {
+			"submit": "Send",
+			"sending": "Sending..."
+		},
+		"status": {
+			"success": "Thank you! Your form has been successfully submitted.",
+			"error": "An error occurred while submitting the form. Please try again."
+		}
+	},
+	"common": {
+		"btn1": "Contact",
+		"btn2": "Place an order",
+		"btn3": "More details",
+		"btn4": "View all"
+	},
+	"contacts": {
+		"phone": {
+			"label": "Contacts",
+			"value": "+380 99 339 55 58",
+			"link": "tel:+380993395558"
+		},
+		"workHours": {
+			"label": "Working hours:",
+			"value": "Mon-Sun 9:00 - 20:00"
+		},
+		"email": {
+			"label": "E-mail",
+			"value": "brandifycooperation@gmail.com",
+			"link": "mailto:brandifycooperation@gmail.com"
+		},
+		"address": {
+			"label": "Address",
+			"value": "Lviv, Krasivska St., 1",
+			"link": "https://g.co/kgs/DqsPMPH"
+		}
+	},
+	"nav": {
+		"toHome": "Home",
+		"toProds": "Products",
+		"toMaterials": "Materials",
+		"toReviews": "Reviews",
+		"toAbout": "About us",
+		"toOurWorks": "Our works",
+		"toJob": "Cooperation"
+	},
+	"dropdowns": {
+		"drop1": [
+			{
+				"id": 1,
+				"path": "",
+				"label": "Business socks"
+			},
+			{
+				"id": 2,
+				"path": "",
+				"label": "Corporate socks"
+			},
+			{
+				"id": 3,
+				"path": "",
+				"label": "Sports socks"
+			},
+			{
+				"id": 4,
+				"path": "",
+				"label": "Kids socks"
+			},
+			{
+				"id": 5,
+				"path": "",
+				"label": "All categories"
+			}
+		]
+	},
+	"companiesList": {
+		"title": "Companies we work with:"
+	},
+	"footer": {
+		"privacy": "Brandify 2025 © All rights reserved",
+		"policy": "Privacy Policy"
+	},
+	"workProccess": {
+		"title": "Work Process",
+		"list": [
+			{
+				"id": 1,
+				"title": "1. Visualization development",
+				"text": "We create the design of your logo print and make adjustments.",
+				"image": "/icons/wp1.svg"
+			},
+			{
+				"id": 2,
+				"title": "2. Sample production",
+				"text": "After design approval and sample payment, we produce a test pair.",
+				"image": "/icons/wp2.svg"
+			},
+			{
+				"id": 3,
+				"title": "3. Sample delivery",
+				"text": "We send it for approval (Nova Poshta, Ukrposhta).",
+				"image": "/icons/wp3.svg"
+			},
+			{
+				"id": 4,
+				"title": "4. Final parameters agreement",
+				"text": "We agree on material, quantity, sizes, and production timeline.",
+				"image": "/icons/wp4.svg"
+			},
+			{
+				"id": 5,
+				"title": "5. Order payment",
+				"text": "You make a down payment to start production.",
+				"image": "/icons/wp5.svg"
+			},
+			{
+				"id": 6,
+				"title": "6. Production launch",
+				"text": "We begin manufacturing the batch of branded socks.",
+				"image": "/icons/wp6.svg"
+			},
+			{
+				"id": 7,
+				"title": "7. Individual packaging",
+				"text": "We develop and add labels if needed and package according to your brand.",
+				"image": "/icons/wp7.svg"
+			},
+			{
+				"id": 8,
+				"title": "8. Order shipping",
+				"text": "We deliver the finished products in the most convenient way for you.",
+				"image": "/icons/wp8.svg"
+			}
+		]
+	},
+	"homePage": {
+		"hero": {
+			"title": "Branded socks — fast and easy",
+			"labels": {
+				"label1": {
+					"label": "Production time:",
+					"subLabel": "5 days"
+				},
+				"label2": {
+					"label": "Order:",
+					"subLabel": "from 10 pairs"
+				},
+				"label3": {
+					"label": "Design:",
+					"subLabel": "free"
+				}
+			}
+		},
+		"howWeWork": {
+			"title": "How we work?",
+			"cards": [
+				{
+					"id": 1,
+					"image": "/icons/hw-plane-2.svg",
+					"imageAlternate": "/icons/hw-plane-1.svg",
+					"title": "Send your logo or design",
+					"text": "Submit a request or contact us via social media or messengers. You can also reach us by phone – we'll take care of everything else."
+				},
+				{
+					"id": 2,
+					"image": "/icons/icons/hw-sock-2.svg",
+					"imageAlternate": "/icons/hw-sock-1.svg",
+					"title": "Approval and production",
+					"text": "After final adjustments, you receive a test pair. Upon approval, we start production and deliver the finished batch in the shortest possible time."
+				},
+				{
+					"id": 3,
+					"image": "/icons/hw-box-2.svg",
+					"imageAlternate": "/icons/hw-box-1.svg",
+					"title": "Development and sample creation",
+					"text": "Together with you, we'll prepare several unique sock design options and produce test samples."
+				}
+			]
+		},
+		"ourWorks": {
+			"title": "Our Works",
+			"text": "At Brandyfy, we produce high-quality custom branded socks that become part of your business image. They're perfect as corporate gifts, employee uniform elements, promotional products, or branded merchandise.",
+			"cards": [
+				{
+					"id": 1,
+					"image": "/images/home/ow (1).png",
+					"title": "No-show socks",
+					"path": ""
+				},
+				{
+					"id": 2,
+					"image": "/images/home/ow (2).png",
+					"title": "Classic (medium height)",
+					"path": ""
+				},
+				{
+					"id": 3,
+					"image": "/images/home/ow (3).png",
+					"title": "High (sports)",
+					"path": ""
+				},
+				{
+					"id": 4,
+					"image": "/images/home/ow (4).png",
+					"title": "Knee-high socks",
+					"path": ""
+				}
+			]
+		},
+		"questionsAndAnswers": {
+			"title": "Questions and Answers",
+			"list": [
+				{
+					"id": 1,
+					"question": "What is the minimum order?",
+					"answer": "<p>The minimum order is 50 pairs of one model.</p><p>Different sizes are available:</p><p>Kids sizes:</p><ul><li>29-30</li><li>30-33</li><li>33-35</li></ul><p>Women's sizes:</p><ul><li>35-37</li><li>37-39</li></ul><p>Men's sizes:</p><ul><li>40-44</li><li>43-47</li></ul>"
+				},
+				{
+					"id": 2,
+					"question": "What is the price?",
+					"answer": "<p>The price is calculated individually for each design depending on complexity and additional elements.</p><p>Prices for classic white or colored socks with a high cuff featuring your print or logo:</p><p><strong>High socks:</strong></p><p>Cuff height from heel 13-16 cm.</p><ul><li>from 10 pairs - 160 UAH / pair</li><li>from 30 pairs - 150 UAH / pair</li><li>from 50 pairs - 110 UAH / pair</li><li>from 100 pairs - 80 UAH / pair</li><li>from 200 pairs - 70 UAH / pair</li><li>from 300 pairs - 60 UAH / pair</li><li>from 500 pairs - 50 UAH / pair</li></ul><p><strong>Medium socks:</strong></p><p>Cuff height from heel 10-13 cm.</p><ul><li>from 10 pairs - 150 UAH / pair</li><li>from 30 pairs - 140 UAH / pair</li><li>from 50 pairs - 105 UAH / pair</li><li>from 100 pairs - 77 UAH / pair</li><li>from 200 pairs - 67 UAH / pair</li><li>from 300 pairs - 57 UAH / pair</li><li>from 500 pairs - 47 UAH / pair</li></ul><p><strong>Short socks:</strong></p><p>Cuff height from heel 1-5 cm.</p><ul><li>from 10 pairs - 140 UAH / pair</li><li>from 30 pairs - 130 UAH / pair</li><li>from 50 pairs - 100 UAH / pair</li><li>from 100 pairs - 70 UAH / pair</li><li>from 200 pairs - 60 UAH / pair</li><li>from 300 pairs - 50 UAH / pair</li><li>from 500 pairs - 40 UAH / pair</li></ul>"
+				},
+				{
+					"id": 3,
+					"question": "Do you develop visualizations?",
+					"answer": "<p>Yes, when needed. We have a designer who can create visualizations.</p>"
+				},
+				{
+					"id": 4,
+					"question": "Can I develop my own design and send it to you?",
+					"answer": "<p>Yes, certainly.</p>"
+				},
+				{
+					"id": 5,
+					"question": "Do you provide a test sample sock to understand how the sock will look?",
+					"answer": "<p>Development of a test sample costs 100-200 UAH (simple design), for complex work - 400-500 UAH. Development time is 1-3 days.</p>"
+				},
+				{
+					"id": 6,
+					"question": "Do you have designers who can develop a custom label design?",
+					"answer": "<p>Yes. Label design development costs 400-600 UAH depending on complexity and number of variations. You can also design the label yourself.</p>"
+				},
+				{
+					"id": 7,
+					"question": "Do you produce labels?",
+					"answer": "<p>Yes, we work with printing companies. The approximate cost of a label is 3-7 UAH (labels come in different varieties).</p>"
+				},
+				{
+					"id": 8,
+					"question": "What additional elements can be added to the socks?",
+					"answer": "<ul><li>Compression bands on the foot + 3 UAH/pair</li><li>Reinforced toe and heel + 3 UAH/pair</li><li>Moisture-wicking channels + 3 UAH/pair</li><li>Breathable mesh + 3 UAH/pair</li><li>Combined cotton with polyester + 8 UAH/pair</li><li>Terry cloth on heel and toe + 10 UAH/pair</li><li>Terry cloth on the sole + 13 UAH/pair</li><li>Fully terry model (inquire for details)</li><li>Increased cuff height + 5 UAH/pair</li></ul>"
+				},
+				{
+					"id": 9,
+					"question": "If I reorder, what will be the price per pair? And do I need to pay for a test sample again?",
+					"answer": "<p>For repeat orders, your price per pair remains fixed if you order the same or smaller quantity. If the number of pairs increases, we can discuss the cost.</p><p>No, the test sample is paid for only once.</p>"
+				},
+				{
+					"id": 10,
+					"question": "How long will I wait for my order?",
+					"answer": "<p>100 pairs - 3 days from test sample approval.</p><p>500 pairs - 7 days from test sample approval.</p><p>*Express production is possible. This is discussed individually.</p>"
+				},
+				{
+					"id": 11,
+					"question": "What is the cooperation process?",
+					"answer": "<ul><li>We send samples so you can evaluate the quality of our products.</li><li>We agree on sock type, material, quantity, and model size.</li><li>We develop a visualization of your print (logo) and make adjustments.</li><li>You pay for and we develop a sample, making adjustments until approval.</li><li>We send the sample to you for approval via Nova Poshta or Ukrposhta.</li><li>We agree on timeline.</li><li>You make a down payment.</li><li>After approval, we begin fulfilling the order.</li><li>We develop a label design if needed.</li><li>We package the completed order.</li><li>Full payment for the order.</li><li>We ship the socks to you.</li></ul>"
+				},
+				{
+					"id": 12,
+					"question": "What are the payment terms?",
+					"answer": "<ul><li>Payment is made in the amount of 50% or 100% of the order value to the entrepreneur account (prepayment is mandatory)</li><li>Payment for sample, design development, and label is possible</li></ul>"
+				},
+				{
+					"id": 13,
+					"question": "In what areas can branded socks be used?",
+					"answer": "<ul><li>✔️ For brands and stores – sell your own unique socks with your logo and design.</li><li>✔️ As corporate and holiday gifts – this helps emphasize your company's corporate style or can be used as a gift for employees and clients.</li><li>✔️ For sports teams – socks with your team logo not only emphasize your uniqueness but also add confidence and comfort with every step, as they can be designed to meet the needs of each sport.</li><li>✔️ Personalized gifts at exhibitions and conferences – personalized or themed socks for special events that help draw additional attention to your brand.</li></ul>"
+				},
+				{
+					"id": 14,
+					"question": "Why are branded socks an excellent choice for your business?",
+					"answer": "<ol><li><strong>Versatility and practicality</strong><br>Socks are a necessary accessory that everyone wears. They are suitable for any audience: employees, clients, partners, or brand fans. They are universal in size, which greatly simplifies the choice.</li><li><strong>Effective advertising tool</strong><br>Branded socks with a logo or unique design work as \"walking advertising.\" People wear them in everyday life, subconsciously promoting your brand.</li><li><strong>Affordable cost</strong><br>Unlike t-shirts or hoodies, the production of branded socks is cheaper, but they are no less effective in promoting the company.</li><li><strong>Variety of uses</strong><br>Socks can be part of a corporate style, merchandise for sale, gifts in advertising campaigns, or souvenirs for loyal customers.</li><li><strong>High audience loyalty</strong><br>Original branded socks evoke positive emotions and associations with your brand, strengthening customer trust.</li><li><strong>Customization for your brand</strong><br>You can create a unique design in corporate colors, add slogans, patterns, logos – everything that will make your brand recognizable.</li><li><strong>Eco-friendly choice</strong><br>Socks made from natural materials correspond to the trend for environmental friendliness and can enhance the positive image of the company.</li></ol>"
+				}
+			]
 		}
 	}
 }

@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import './ContactForm.scss';
 
 const ContactForm = () => {
+	const t = useTranslations('form');
 	const { register, handleSubmit, formState: { errors }, reset } = useForm();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState(null);
@@ -17,7 +19,7 @@ const ContactForm = () => {
 		const file = e.target.files[0];
 		if (file) {
 			if (file.size > MAX_FILE_SIZE) {
-				alert('Файл занадто великий. Максимальний розмір файлу: 5MB');
+				alert(t('errors.fileSize'));
 				e.target.value = '';
 				setSelectedFile(null);
 			} else {
@@ -48,7 +50,7 @@ const ContactForm = () => {
 			});
 
 			if (!response.ok) {
-				throw new Error(`Помилка сервера: ${response.status}`);
+				throw new Error(`${t('errors.serverError')} ${response.status}`);
 			}
 
 			const result = await response.json();
@@ -66,8 +68,8 @@ const ContactForm = () => {
 	return (
 		<div className="ContactForm">
 			<div className="ContactForm__title">
-				<h2>Зв’яжіться з нами</h2>
-				<p>Будь ласка, заповніть форму нижче, щоб зв’язатися з нами</p>
+				<h2>{t('title')}</h2>
+				<p>{t('subtitle')}</p>
 			</div>
 
 			<form onSubmit={handleSubmit(onSubmit)} className="form">
@@ -76,8 +78,8 @@ const ContactForm = () => {
 						<input
 							id="lastName"
 							type="text"
-							placeholder="Прізвище"
-							{...register('lastName', { required: 'Прізвище є обов\'язковим полем' })}
+							placeholder={t('place.p1')}
+							{...register('lastName', { required: t('errors.lastName') })}
 							className={errors.lastName ? 'input-error' : ''}
 						/>
 						{errors.lastName && <span className="error-message">{errors.lastName.message}</span>}
@@ -87,8 +89,8 @@ const ContactForm = () => {
 						<input
 							id="firstName"
 							type="text"
-							placeholder="Ім’я"
-							{...register('firstName', { required: 'Ім\'я є обов\'язковим полем' })}
+							placeholder={t('place.p2')}
+							{...register('firstName', { required: t('errors.firstName') })}
 							className={errors.firstName ? 'input-error' : ''}
 						/>
 						{errors.firstName && <span className="error-message">{errors.firstName.message}</span>}
@@ -99,13 +101,13 @@ const ContactForm = () => {
 							id="phone"
 							type="tel"
 							{...register('phone', {
-								required: 'Номер телефону є обов\'язковим полем',
+								required: t('errors.phone'),
 								pattern: {
 									value: /^\+?[0-9\s\-\(\)]+$/,
-									message: 'Будь ласка, введіть правильний номер телефону'
+									message: t('errors.phoneFormat')
 								}
 							})}
-							placeholder='Номер телефону'
+							placeholder={t('place.p3')}
 							className={errors.phone ? 'input-error' : ''}
 						/>
 						{errors.phone && <span className="error-message">{errors.phone.message}</span>}
@@ -116,13 +118,13 @@ const ContactForm = () => {
 							id="email"
 							type="email"
 							{...register('email', {
-								required: 'Email є обов\'язковим полем',
+								required: t('errors.email'),
 								pattern: {
 									value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-									message: 'Будь ласка, введіть правильну електронну адресу'
+									message: t('errors.emailFormat')
 								}
 							})}
-							placeholder='Електронна пошта'
+							placeholder={t('place.p4')}
 							className={errors.email ? 'input-error' : ''}
 						/>
 						{errors.email && <span className="error-message">{errors.email.message}</span>}
@@ -134,12 +136,11 @@ const ContactForm = () => {
 						id="comment"
 						{...register('comment')}
 						rows="1"
-
-						placeholder='Коментар'
+						placeholder={t('place.p5')}
 					></textarea>
 				</div>
 
-				<div className=" form-row form-file">
+				<div className="form-row form-file">
 					<input
 						id="file"
 						type="file"
@@ -154,15 +155,15 @@ const ContactForm = () => {
 							<label htmlFor="file">
 								<Image src={"/icons/screpka.svg"} width={18} height={18} alt='@' />
 								<span>
-									Прикріпити файл (до 5МБ)
+									{t('file')}
 								</span>
 							</label>
 					}
 				</div>
 
-				<div className=" form-row form-agree">
+				<div className="form-row form-agree">
 					<input type="checkbox" name="agree" id="agree" className="agree-input" />
-					<label htmlFor="agree">Я даю згоду на користування власними данними</label>
+					<label htmlFor="agree">{t('confirm')}</label>
 				</div>
 
 				<button
@@ -170,20 +171,20 @@ const ContactForm = () => {
 					className="btn"
 					disabled={isSubmitting}
 				>
-					{isSubmitting ? 'Надсилання...' :
-						<><span>Надіслати</span><Image src={"/icons/white-plane.svg"} width={18} height={15} alt='->' /></>
+					{isSubmitting ? t('button.sending') :
+						<><span>{t('button.submit')}</span><Image src={"/icons/white-plane.svg"} width={18} height={15} alt='->' /></>
 					}
 				</button>
 
 				{submitStatus === 'success' && (
 					<div className="success-message">
-						Дякуємо! Ваша форма успішно надіслана.
+						{t('status.success')}
 					</div>
 				)}
 
 				{submitStatus === 'error' && (
 					<div className="error-message">
-						Під час надсилання форми сталася помилка. Будь ласка, спробуйте ще раз.
+						{t('status.error')}
 					</div>
 				)}
 			</form>

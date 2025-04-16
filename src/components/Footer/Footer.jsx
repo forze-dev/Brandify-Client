@@ -6,8 +6,13 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
 import Image from "next/image"
 import Navigation from "../Navigation/Navigation"
 import ContactButton from "../ContactButton/ContactButton"
+import { useTranslations } from "next-intl"
 
 const Footer = () => {
+
+	const tContacts = useTranslations("contacts")
+	const tCommon = useTranslations("common")
+	const tFoot = useTranslations("footer")
 
 	return (
 		<footer>
@@ -19,29 +24,25 @@ const Footer = () => {
 								<Image src="/icons/logo-white.svg" width={167} height={44} alt="Logo" loading="lazy" />
 							</Link>
 						</div>
-						<ContactButton text={"Зв’язатися"} classList={"btn-second"} />
+						<ContactButton text={tCommon("btn1")} classList={"btn-second"} />
 						<LanguageSwitcher />
 					</div>
 					<div className="Footer__item Footer__contacts">
 						<div className="Footer__item-context">
-							<span>Контактии</span>
-							<a href="tel:+380993395558">+380 99 339 55 58</a>
+							<span>{tContacts("phone.label")}</span>
+							<a target="_blank" href={tContacts("phone.link")}>{tContacts("phone.value")}</a>
 						</div>
 						<div className="Footer__item-context">
-							<span>Графік роботи:</span>
-							<span>Пн-Нд 9:00 - 20:00</span>
+							<span>{tContacts("workHours.label")}</span>
+							<span>{tContacts("workHours.value")}</span>
 						</div>
 						<div className="Footer__item-context">
-							<span>Е-mail</span>
-							<a href="mailto:example@gmail.com">example@gmail.com</a>
+							<span>{tContacts("email.label")}</span>
+							<a target="_blank" href={tContacts("email.link")}>{tContacts("email.value")}</a>
 						</div>
 						<div className="Footer__item-context">
-							<span>Адресса</span>
-							<a href="/">Супер вулиця</a>
-						</div>
-						<div className="Footer__item-context">
-							<span>Адресса</span>
-							<a href="/">Супер вулиця</a>
+							<span>{tContacts("address.label")}</span>
+							<a target="_blank" href={tContacts("address.link")}>{tContacts("address.value")}</a>
 						</div>
 					</div>
 					<div className="Footer__item">
@@ -50,8 +51,8 @@ const Footer = () => {
 				</div>
 
 				<div className="Footer__bottom">
-					<span>Brandify 2025 © Усі права захищено</span>
-					<Link href={"/"}>Політика конфіденційності</Link>
+					<span>{tFoot("privacy")}</span>
+					<Link href={"/"}>{tFoot("policy")}</Link>
 				</div>
 			</div>
 

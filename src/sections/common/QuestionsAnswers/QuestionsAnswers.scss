@@ -60,6 +60,20 @@ section.QuestionsAnswers {
 		font-size: 16px;
 		padding: 0 40px 40px 40px;
 	}
+
+	.QuestionsAnswers__answer-content {
+		font-size: 16px;
+		ul,
+		ol {
+			padding-left: 20px;
+		}
+		p {
+			margin: 8px 0 4px 0;
+		}
+		li {
+			margin-bottom: 6px;
+		}
+	}
 }
 
 @media all and (max-width: 900px) {
@@ -107,6 +121,9 @@ section.QuestionsAnswers {
 
 			font-size: 16px;
 			padding: 0 20px 20px 20px;
+		}
+		.QuestionsAnswers__answer-content {
+			font-size: 14px;
 		}
 	}
 }

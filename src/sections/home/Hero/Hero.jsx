@@ -7,37 +7,42 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
 import LogoMarquee from "@/components/LogosMarquee/LogosMarquee";
 import ContactButton from "@/components/ContactButton/ContactButton";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+
+	const tHero = useTranslations("homePage.hero")
+	const tCommon = useTranslations("common")
+	const tCompanies = useTranslations("companiesList")
 
 	return (
 		<section className="hero">
 			<div className="hero__row">
 				<div className="container">
 					<div className="hero__wrapper">
-						<h1>Брендовані шкарпетки — швидко та легко</h1>
+						<h1>{tHero("title")}</h1>
 						<div className="hero__marks">
 							<div className="hero__marks-item">
 								<Image src={"/icons/h-clock.svg"} alt="hero-icon" width={30} height={30} />
 								<p>
-									Термін виготовлення: <span>5 днів</span>
+									{tHero("labels.label1.label")} <span>{tHero("labels.label1.subLabel")}</span>
 								</p>
 							</div>
 							<div className="hero__marks-item">
 								<Image src={"/icons/h-sock.svg"} alt="hero-icon" width={30} height={30} />
 								<p>
-									Замовлення: <span>від 10 пар</span>
+									{tHero("labels.label2.label")} <span>{tHero("labels.label2.subLabel")}</span>
 								</p>
 							</div>
 							<div className="hero__marks-item">
 								<Image src={"/icons/h-pc.svg"} alt="hero-icon" width={30} height={30} />
 								<p>
-									Дизайн: <span>безкоштовний</span>
+									{tHero("labels.label3.label")} <span>{tHero("labels.label3.subLabel")}</span>
 								</p>
 							</div>
 						</div>
 
-						<ContactButton text={"Оформити замовлення"} classList={"btn hero__call-form"} />
+						<ContactButton text={tCommon("btn2")} classList={"btn hero__call-form"} />
 					</div>
 				</div>
 				<div className="hero__slider-mobile">
@@ -109,7 +114,7 @@ const Hero = () => {
 			</div>
 
 			<div className="hero__marquee">
-				<h3>Компанії, з якими ми співпрацюємо:</h3>
+				<h3>{tCompanies("title")}</h3>
 				<LogoMarquee />
 			</div>
 		</section>

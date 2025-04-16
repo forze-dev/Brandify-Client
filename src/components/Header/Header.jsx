@@ -10,18 +10,21 @@ import { useTranslations } from "next-intl";
 
 const Header = () => {
 	const [openedBurgerMenu, setOpenedBurgerMenu] = useState(false)
+	const [openPanel, setOpenPanel] = useState(false)
 
-	const { } = useTranslations()
+	const t = useTranslations('common');
 
 	useEffect(() => {
 		if (openedBurgerMenu) {
 			document.body.classList.add("fixed-body")
 		} else {
 			document.body.classList.remove("fixed-body")
+			setOpenPanel(false)
 		}
 
 		return () => {
 			document.body.classList.remove("fixed-body")
+			setOpenPanel(false)
 		};
 	}, [openedBurgerMenu]);
 
@@ -36,12 +39,12 @@ const Header = () => {
 					</div>
 
 					<nav className={`navigation ${openedBurgerMenu ? "active" : ""}`}>
-						<Navigation />
+						<Navigation isPanel={true} openPanel={openPanel} setOpenPanel={setOpenPanel} />
 					</nav>
 
 					<LanguageSwitcher />
 
-					<ContactButton text={"Зв’язатися"} classList={"btn header__action-btn"} />
+					<ContactButton text={t("btn1")} classList={"btn header__action-btn"} />
 
 					<button className={`header__burger ${openedBurgerMenu ? "active" : ""}`} onClick={() => setOpenedBurgerMenu(prev => !prev)}>
 						<figure></figure>
