@@ -1,5 +1,5 @@
 section.hero {
-	margin: 0;
+	margin: 60px 0;
 	.hero__row {
 		display: flex;
 		flex-direction: column;
@@ -19,7 +19,7 @@ section.hero {
 	h1 {
 		font-size: 64px;
 		text-align: center;
-		margin: 40px auto 30px auto;
+		margin: 0px auto 30px auto;
 		max-width: 900px;
 	}
 
@@ -87,6 +87,7 @@ section.hero {
 
 @media all and (max-width: 768px) {
 	section.hero {
+		margin: 0;
 		padding: 30px 0;
 		h1 {
 			font-size: 32px;
@@ -132,6 +133,7 @@ section.hero {
 
 @media all and (max-width: 438px) {
 	section.hero {
+		margin: 0;
 		padding: 30px 0;
 		h1 {
 			font-size: 26px;
