@@ -1,13 +1,12 @@
 import { routing } from '@/i18n/routing';
 import HeroSockMaterials from '@/sections/sock-materials/HeroSockMaterials/HeroSockMaterials';
 import CatalogMaterials from '@/sections/sock-materials/CatalogMaterials/CatalogMaterials';
+import { Suspense } from 'react';
 
-// Генерація статичних параметрів для локалей
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
 }
 
-// Метадані для SEO
 export async function generateMetadata({ params }) {
 	const paramsData = await params;
 	const locale = paramsData.locale;
@@ -24,7 +23,9 @@ export default function MaterialsPage() {
 	return (
 		<main>
 			<HeroSockMaterials />
-			<CatalogMaterials />
+			<Suspense fallback={<div>Завантаження матеріалів...</div>}>
+				<CatalogMaterials />
+			</Suspense>
 		</main>
 	);
 }
