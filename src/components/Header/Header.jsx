@@ -32,11 +32,14 @@ const Header = () => {
 		<header>
 			<div className="container">
 				<div className="header__wrapper">
-					<div className="logo">
-						<Link href="/">
-							<Image src="/icons/logo.svg" width={167} height={44} alt="Logo" loading="lazy" />
-						</Link>
-					</div>
+					{
+						!openPanel &&
+						<div className="logo">
+							<Link href="/">
+								<Image src="/icons/logo.svg" width={167} height={44} alt="Logo" loading="lazy" />
+							</Link>
+						</div>
+					}
 
 					<nav className={`navigation ${openedBurgerMenu ? "active" : ""}`}>
 						<Navigation isPanel={true} openPanel={openPanel} setOpenPanel={setOpenPanel} />

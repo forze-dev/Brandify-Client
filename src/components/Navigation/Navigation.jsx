@@ -39,7 +39,6 @@ const Navigation = ({ isPanel, openPanel, setOpenPanel }) => {
 				</li>
 			}
 
-
 			<li className="navigation__item">
 				<Link href="/sock-materials" className="navigation__link">{tNav("toMaterials")}</Link>
 			</li>
