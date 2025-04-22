@@ -1,6 +1,4 @@
 "use client"
-
-
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -12,32 +10,41 @@ const CatalogMaterials = () => {
 	const searchParams = useSearchParams();
 	const tSM = useTranslations("materials");
 
-	const catalogData = [
-		{ id: "polyester", label: tSM("catalog1.label"), list: tSM.raw("catalog1.list"), name: tSM("catalog1.name") },
-		{ id: "12", label: tSM("catalog2.label"), list: tSM.raw("catalog2.list"), name: tSM("catalog2.name") },
-		{ id: "15", label: tSM("catalog3.label"), list: tSM.raw("catalog3.list"), name: tSM("catalog3.name") }
-	];
+	const catalogKeys = tSM.raw("catalogKeys");
+	const catalogLink = tSM.raw("catalogsLink");
 
-	const [activeCatalog, setActiveCatalog] = useState("polyester");
+	const [activeCatalog, setActiveCatalog] = useState(catalogKeys[0].param);
+	const [catalogData, setCatalogData] = useState(null);
 
 	useEffect(() => {
 		const catalogParam = searchParams.get("catalog");
-		if (catalogParam && catalogData.some(cat => cat.id === catalogParam)) {
+		const defaultCatalog = catalogKeys[0].param;
+
+		if (catalogParam && catalogKeys.some(cat => cat.param === catalogParam)) {
 			setActiveCatalog(catalogParam);
+		} else {
+			setActiveCatalog(defaultCatalog);
 		}
-	}, [searchParams]);
 
-	const handleCatalogToggle = (catalogId) => {
-		setActiveCatalog(catalogId);
+		fetch(catalogLink)
+			.then((res) => res.json())
+			.then((catalogs) => {
+				setCatalogData(catalogs[activeCatalog] || null);
+			})
+			.catch(() => {
+				setCatalogData(false);
+			});
+	}, [searchParams, activeCatalog, catalogLink, catalogKeys]);
 
+	const handleCatalogToggle = (catalogParam) => {
+		setActiveCatalog(catalogParam);
 		const params = new URLSearchParams(searchParams.toString());
-		params.set("catalog", catalogId);
-
+		params.set("catalog", catalogParam);
 		router.push(`?${params.toString()}`, { scroll: false });
 	};
 
-	// Get active catalog data
-	const activeData = catalogData.find(cat => cat.id === activeCatalog);
+	if (catalogData === null) return "Loading...";
+	if (catalogData === false) return null
 
 	return (
 		<section className="catalog-materials">
@@ -45,11 +52,11 @@ const CatalogMaterials = () => {
 				<div className="catalog-materials__wrapper">
 					<div className="catalog-materials__top">
 						<div className="catalog-materials__toggles">
-							{catalogData.map((catalog) => (
+							{catalogKeys.map((catalog) => (
 								<button
 									key={catalog.id}
-									className={`catalog-materials__toggle ${activeCatalog === catalog.id ? 'active' : ''}`}
-									onClick={() => handleCatalogToggle(catalog.id)}
+									className={`catalog-materials__toggle ${activeCatalog === catalog.param ? 'active' : ''}`}
+									onClick={() => handleCatalogToggle(catalog.param)}
 								>
 									<span>{catalog.label}</span>
 									<span>{catalog.name}</span>
@@ -61,19 +68,15 @@ const CatalogMaterials = () => {
 						</div>
 					</div>
 
-					{/* Catalog Content */}
 					<div className="catalog-materials__catalog">
 						<ul className="catalog-materials__list">
-							{Array.isArray(activeData.list) ? (
-								activeData.list.map((item, index) => (
+							{Array.isArray(catalogData.list) && (
+								catalogData.list.map((item, index) => (
 									<li key={item.id + index} className="catalog-materials__item">
 										<Image src={item.image} width={116} height={90} alt={item.id + "-photo"} />
-										<span></span>
-										{item.id}
+										<span>{tSM("labelColor") + " " + item.id}</span>
 									</li>
 								))
-							) : (
-								<div dangerouslySetInnerHTML={{ __html: activeData.list }} />
 							)}
 						</ul>
 					</div>

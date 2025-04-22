@@ -304,5 +304,35 @@
 				}
 			]
 		}
+	},
+	"materials": {
+		"title": "Our Sock Yarn",
+		"text": "Choose from a wide range of colors and we will create unique socks for you that will brighten your day.",
+		"download": "Download Catalog",
+		"labelColor": "Code:",
+		"catalogKeys": [
+			{
+				"id": "catalog1",
+				"param": "polyester",
+				"label": "Catalog 1",
+				"name": "Polyester (synthetic yarn)",
+				"pdfLink": ""
+			},
+			{
+				"id": "catalog2",
+				"param": "osborn",
+				"label": "Catalog 2",
+				"name": "Cotton Osborn",
+				"pdfLink": ""
+			},
+			{
+				"id": "catalog3",
+				"param": "winsome",
+				"label": "Catalog 3",
+				"name": "Cotton Winsome",
+				"pdfLink": ""
+			}
+		],
+		"catalogsLink": "/catalogs/config-en.json"
 	}
 }

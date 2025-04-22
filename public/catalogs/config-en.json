@@ -1,0 +1,971 @@
+{
+	"polyester": {
+		"param": "polyester",
+		"label": "Catalog 1",
+		"name": "Polyester (synthetic yarn)",
+		"list": [
+			{
+				"id": "8001",
+				"image": "/catalogs/1/8001.webp"
+			},
+			{
+				"id": "8003",
+				"image": "/catalogs/1/8003.webp"
+			},
+			{
+				"id": "8004",
+				"image": "/catalogs/1/8004.webp"
+			},
+			{
+				"id": "8005",
+				"image": "/catalogs/1/8005.webp"
+			},
+			{
+				"id": "8006",
+				"image": "/catalogs/1/8006.webp"
+			},
+			{
+				"id": "8007",
+				"image": "/catalogs/1/8007.webp"
+			},
+			{
+				"id": "8008",
+				"image": "/catalogs/1/8008.webp"
+			},
+			{
+				"id": "8009",
+				"image": "/catalogs/1/8009.webp"
+			},
+			{
+				"id": "8010",
+				"image": "/catalogs/1/8010.webp"
+			},
+			{
+				"id": "2011",
+				"image": "/catalogs/1/2011.webp"
+			},
+			{
+				"id": "8012",
+				"image": "/catalogs/1/8012.webp"
+			},
+			{
+				"id": "8013",
+				"image": "/catalogs/1/8013.webp"
+			},
+			{
+				"id": "8014",
+				"image": "/catalogs/1/8014.webp"
+			},
+			{
+				"id": "8015",
+				"image": "/catalogs/1/8015.webp"
+			},
+			{
+				"id": "8016",
+				"image": "/catalogs/1/8016.webp"
+			},
+			{
+				"id": "8017",
+				"image": "/catalogs/1/8017.webp"
+			},
+			{
+				"id": "8018",
+				"image": "/catalogs/1/8018.webp"
+			},
+			{
+				"id": "8021",
+				"image": "/catalogs/1/8021.webp"
+			},
+			{
+				"id": "8022",
+				"image": "/catalogs/1/8022.webp"
+			},
+			{
+				"id": "8023",
+				"image": "/catalogs/1/8023.webp"
+			},
+			{
+				"id": "8024",
+				"image": "/catalogs/1/8024.webp"
+			},
+			{
+				"id": "8025",
+				"image": "/catalogs/1/8025.webp"
+			},
+			{
+				"id": "8026",
+				"image": "/catalogs/1/8026.webp"
+			},
+			{
+				"id": "8027",
+				"image": "/catalogs/1/8027.webp"
+			},
+			{
+				"id": "8028",
+				"image": "/catalogs/1/8028.webp"
+			},
+			{
+				"id": "8029",
+				"image": "/catalogs/1/8029.webp"
+			},
+			{
+				"id": "8031",
+				"image": "/catalogs/1/8031.webp"
+			},
+			{
+				"id": "8032",
+				"image": "/catalogs/1/8032.webp"
+			},
+			{
+				"id": "8033",
+				"image": "/catalogs/1/8033.webp"
+			},
+			{
+				"id": "8034",
+				"image": "/catalogs/1/8034.webp"
+			},
+			{
+				"id": "8035",
+				"image": "/catalogs/1/8035.webp"
+			},
+			{
+				"id": "8036",
+				"image": "/catalogs/1/8036.webp"
+			},
+			{
+				"id": "8037",
+				"image": "/catalogs/1/8037.webp"
+			},
+			{
+				"id": "8040",
+				"image": "/catalogs/1/8040.webp"
+			},
+			{
+				"id": "8041",
+				"image": "/catalogs/1/8041.webp"
+			},
+			{
+				"id": "8042",
+				"image": "/catalogs/1/8042.webp"
+			},
+			{
+				"id": "8044",
+				"image": "/catalogs/1/8044.webp"
+			},
+			{
+				"id": "8045",
+				"image": "/catalogs/1/8045.webp"
+			},
+			{
+				"id": "8046",
+				"image": "/catalogs/1/8046.webp"
+			},
+			{
+				"id": "8048",
+				"image": "/catalogs/1/8048.webp"
+			},
+			{
+				"id": "8049",
+				"image": "/catalogs/1/8049.webp"
+			},
+			{
+				"id": "8050",
+				"image": "/catalogs/1/8050.webp"
+			},
+			{
+				"id": "8052",
+				"image": "/catalogs/1/8052.webp"
+			},
+			{
+				"id": "8053",
+				"image": "/catalogs/1/8053.webp"
+			},
+			{
+				"id": "8055",
+				"image": "/catalogs/1/8055.webp"
+			},
+			{
+				"id": "8056",
+				"image": "/catalogs/1/8056.webp"
+			},
+			{
+				"id": "8060",
+				"image": "/catalogs/1/8060.webp"
+			},
+			{
+				"id": "8061",
+				"image": "/catalogs/1/8061.webp"
+			},
+			{
+				"id": "8062",
+				"image": "/catalogs/1/8062.webp"
+			},
+			{
+				"id": "8063",
+				"image": "/catalogs/1/8063.webp"
+			},
+			{
+				"id": "8064",
+				"image": "/catalogs/1/8064.webp"
+			},
+			{
+				"id": "8065",
+				"image": "/catalogs/1/8065.webp"
+			},
+			{
+				"id": "8067",
+				"image": "/catalogs/1/8067.webp"
+			},
+			{
+				"id": "8068",
+				"image": "/catalogs/1/8068.webp"
+			},
+			{
+				"id": "8069",
+				"image": "/catalogs/1/8069.webp"
+			},
+			{
+				"id": "8071",
+				"image": "/catalogs/1/8071.webp"
+			},
+			{
+				"id": "8072",
+				"image": "/catalogs/1/8072.webp"
+			},
+			{
+				"id": "8073",
+				"image": "/catalogs/1/8073.webp"
+			},
+			{
+				"id": "8074",
+				"image": "/catalogs/1/8074.webp"
+			},
+			{
+				"id": "8075",
+				"image": "/catalogs/1/8075.webp"
+			},
+			{
+				"id": "8076",
+				"image": "/catalogs/1/8076.webp"
+			},
+			{
+				"id": "8078",
+				"image": "/catalogs/1/8078.webp"
+			},
+			{
+				"id": "8079",
+				"image": "/catalogs/1/8079.webp"
+			},
+			{
+				"id": "8080",
+				"image": "/catalogs/1/8080.webp"
+			},
+			{
+				"id": "8082",
+				"image": "/catalogs/1/8082.webp"
+			},
+			{
+				"id": "8083",
+				"image": "/catalogs/1/8083.webp"
+			},
+			{
+				"id": "8084",
+				"image": "/catalogs/1/8084.webp"
+			},
+			{
+				"id": "8085",
+				"image": "/catalogs/1/8085.webp"
+			},
+			{
+				"id": "8086",
+				"image": "/catalogs/1/8086.webp"
+			},
+			{
+				"id": "8087",
+				"image": "/catalogs/1/8087.webp"
+			},
+			{
+				"id": "8088",
+				"image": "/catalogs/1/8088.webp"
+			},
+			{
+				"id": "8089",
+				"image": "/catalogs/1/8089.webp"
+			},
+			{
+				"id": "8090",
+				"image": "/catalogs/1/8090.webp"
+			},
+			{
+				"id": "8091",
+				"image": "/catalogs/1/8091.webp"
+			},
+			{
+				"id": "8092",
+				"image": "/catalogs/1/8092.webp"
+			},
+			{
+				"id": "8093",
+				"image": "/catalogs/1/8093.webp"
+			},
+			{
+				"id": "8094",
+				"image": "/catalogs/1/8094.webp"
+			},
+			{
+				"id": "8095",
+				"image": "/catalogs/1/8095.webp"
+			},
+			{
+				"id": "8096",
+				"image": "/catalogs/1/8096.webp"
+			},
+			{
+				"id": "8098",
+				"image": "/catalogs/1/8098.webp"
+			},
+			{
+				"id": "8099",
+				"image": "/catalogs/1/8099.webp"
+			},
+			{
+				"id": "8100",
+				"image": "/catalogs/1/8100.webp"
+			},
+			{
+				"id": "8102",
+				"image": "/catalogs/1/8102.webp"
+			},
+			{
+				"id": "8103",
+				"image": "/catalogs/1/8103.webp"
+			},
+			{
+				"id": "8104",
+				"image": "/catalogs/1/8104.webp"
+			},
+			{
+				"id": "8105",
+				"image": "/catalogs/1/8105.webp"
+			},
+			{
+				"id": "8106",
+				"image": "/catalogs/1/8106.webp"
+			},
+			{
+				"id": "8107",
+				"image": "/catalogs/1/8107.webp"
+			},
+			{
+				"id": "8108",
+				"image": "/catalogs/1/8108.webp"
+			},
+			{
+				"id": "8109",
+				"image": "/catalogs/1/8109.webp"
+			},
+			{
+				"id": "8110",
+				"image": "/catalogs/1/8110.webp"
+			},
+			{
+				"id": "8111",
+				"image": "/catalogs/1/8й11.webp"
+			},
+			{
+				"id": "8113",
+				"image": "/catalogs/1/8113.webp"
+			},
+			{
+				"id": "8114",
+				"image": "/catalogs/1/8114.webp"
+			},
+			{
+				"id": "8116",
+				"image": "/catalogs/1/8116.webp"
+			},
+			{
+				"id": "8117",
+				"image": "/catalogs/1/8117.webp"
+			},
+			{
+				"id": "8118",
+				"image": "/catalogs/1/8118.webp"
+			},
+			{
+				"id": "8120",
+				"image": "/catalogs/1/8120.webp"
+			},
+			{
+				"id": "8121",
+				"image": "/catalogs/1/8121.webp"
+			},
+			{
+				"id": "8122",
+				"image": "/catalogs/1/8122.webp"
+			},
+			{
+				"id": "8123",
+				"image": "/catalogs/1/8123.webp"
+			},
+			{
+				"id": "8124",
+				"image": "/catalogs/1/8124.webp"
+			},
+			{
+				"id": "8125",
+				"image": "/catalogs/1/8125.webp"
+			},
+			{
+				"id": "8126",
+				"image": "/catalogs/1/8126.webp"
+			},
+			{
+				"id": "8127",
+				"image": "/catalogs/1/8127.webp"
+			},
+			{
+				"id": "8128",
+				"image": "/catalogs/1/8128.webp"
+			},
+			{
+				"id": "8129",
+				"image": "/catalogs/1/8129.webp"
+			},
+			{
+				"id": "8130",
+				"image": "/catalogs/1/8130.webp"
+			},
+			{
+				"id": "8131",
+				"image": "/catalogs/1/8131.webp"
+			},
+			{
+				"id": "8132",
+				"image": "/catalogs/1/8132.webp"
+			},
+			{
+				"id": "8133",
+				"image": "/catalogs/1/8133.webp"
+			},
+			{
+				"id": "8134",
+				"image": "/catalogs/1/8134.webp"
+			},
+			{
+				"id": "8135",
+				"image": "/catalogs/1/8135.webp"
+			},
+			{
+				"id": "8136",
+				"image": "/catalogs/1/8136.webp"
+			},
+			{
+				"id": "8137",
+				"image": "/catalogs/1/8137.webp"
+			},
+			{
+				"id": "8138",
+				"image": "/catalogs/1/8138.webp"
+			},
+			{
+				"id": "8139",
+				"image": "/catalogs/1/8139.webp"
+			},
+			{
+				"id": "8140",
+				"image": "/catalogs/1/8140.webp"
+			},
+			{
+				"id": "8141",
+				"image": "/catalogs/1/8141.webp"
+			},
+			{
+				"id": "8142",
+				"image": "/catalogs/1/8142.webp"
+			},
+			{
+				"id": "8143",
+				"image": "/catalogs/1/8143.webp"
+			},
+			{
+				"id": "8144",
+				"image": "/catalogs/1/8144.webp"
+			},
+			{
+				"id": "8145",
+				"image": "/catalogs/1/8145.webp"
+			},
+			{
+				"id": "8146",
+				"image": "/catalogs/1/8146.webp"
+			},
+			{
+				"id": "8147",
+				"image": "/catalogs/1/8147.webp"
+			},
+			{
+				"id": "8148",
+				"image": "/catalogs/1/8148.webp"
+			},
+			{
+				"id": "8149",
+				"image": "/catalogs/1/8149.webp"
+			},
+			{
+				"id": "8150",
+				"image": "/catalogs/1/8150.webp"
+			},
+			{
+				"id": "8151",
+				"image": "/catalogs/1/8151.webp"
+			},
+			{
+				"id": "8152",
+				"image": "/catalogs/1/8152.webp"
+			},
+			{
+				"id": "8153",
+				"image": "/catalogs/1/8153.webp"
+			},
+			{
+				"id": "8154",
+				"image": "/catalogs/1/8154.webp"
+			},
+			{
+				"id": "8155",
+				"image": "/catalogs/1/8155.webp"
+			},
+			{
+				"id": "8156",
+				"image": "/catalogs/1/8156.webp"
+			},
+			{
+				"id": "8157",
+				"image": "/catalogs/1/8157.webp"
+			},
+			{
+				"id": "8158",
+				"image": "/catalogs/1/8158.webp"
+			},
+			{
+				"id": "8159",
+				"image": "/catalogs/1/8159.webp"
+			},
+			{
+				"id": "8160",
+				"image": "/catalogs/1/8160.webp"
+			},
+			{
+				"id": "8161",
+				"image": "/catalogs/1/8161.webp"
+			},
+			{
+				"id": "8162",
+				"image": "/catalogs/1/8162.webp"
+			},
+			{
+				"id": "8163",
+				"image": "/catalogs/1/8163.webp"
+			},
+			{
+				"id": "8164",
+				"image": "/catalogs/1/8164.webp"
+			},
+			{
+				"id": "8165",
+				"image": "/catalogs/1/8165.webp"
+			},
+			{
+				"id": "8166",
+				"image": "/catalogs/1/8166.webp"
+			},
+			{
+				"id": "8167",
+				"image": "/catalogs/1/8167.webp"
+			},
+			{
+				"id": "8168",
+				"image": "/catalogs/1/8168.webp"
+			},
+			{
+				"id": "8169",
+				"image": "/catalogs/1/8169.webp"
+			},
+			{
+				"id": "8170",
+				"image": "/catalogs/1/8170.webp"
+			},
+			{
+				"id": "8171",
+				"image": "/catalogs/1/8171.webp"
+			},
+			{
+				"id": "8172",
+				"image": "/catalogs/1/8172.webp"
+			},
+			{
+				"id": "8173",
+				"image": "/catalogs/1/8173.webp"
+			},
+			{
+				"id": "8174",
+				"image": "/catalogs/1/8174.webp"
+			},
+			{
+				"id": "8175",
+				"image": "/catalogs/1/8175.webp"
+			},
+			{
+				"id": "8176",
+				"image": "/catalogs/1/8176.webp"
+			},
+			{
+				"id": "8177",
+				"image": "/catalogs/1/8177.webp"
+			},
+			{
+				"id": "8178",
+				"image": "/catalogs/1/8178.webp"
+			},
+			{
+				"id": "8179",
+				"image": "/catalogs/1/8179.webp"
+			},
+			{
+				"id": "8180",
+				"image": "/catalogs/1/8180.webp"
+			},
+			{
+				"id": "8181",
+				"image": "/catalogs/1/8181.webp"
+			},
+			{
+				"id": "8182",
+				"image": "/catalogs/1/8182.webp"
+			},
+			{
+				"id": "8183",
+				"image": "/catalogs/1/8183.webp"
+			},
+			{
+				"id": "8184",
+				"image": "/catalogs/1/8184.webp"
+			},
+			{
+				"id": "8185",
+				"image": "/catalogs/1/8185.webp"
+			},
+			{
+				"id": "8186",
+				"image": "/catalogs/1/8186.webp"
+			},
+			{
+				"id": "8187",
+				"image": "/catalogs/1/8187.webp"
+			},
+			{
+				"id": "8188",
+				"image": "/catalogs/1/8188.webp"
+			},
+			{
+				"id": "8189",
+				"image": "/catalogs/1/8189.webp"
+			},
+			{
+				"id": "8190",
+				"image": "/catalogs/1/8190.webp"
+			},
+			{
+				"id": "8191",
+				"image": "/catalogs/1/8191.webp"
+			},
+			{
+				"id": "8192",
+				"image": "/catalogs/1/8192.webp"
+			},
+			{
+				"id": "8193",
+				"image": "/catalogs/1/8193.webp"
+			},
+			{
+				"id": "8194",
+				"image": "/catalogs/1/8194.webp"
+			},
+			{
+				"id": "8195",
+				"image": "/catalogs/1/8195.webp"
+			},
+			{
+				"id": "8196",
+				"image": "/catalogs/1/8196.webp"
+			},
+			{
+				"id": "8197",
+				"image": "/catalogs/1/8197.webp"
+			},
+			{
+				"id": "8198",
+				"image": "/catalogs/1/8198.webp"
+			},
+			{
+				"id": "8199",
+				"image": "/catalogs/1/8199.webp"
+			},
+			{
+				"id": "8200",
+				"image": "/catalogs/1/8200.webp"
+			},
+			{
+				"id": "8201",
+				"image": "/catalogs/1/8201.webp"
+			},
+			{
+				"id": "8202",
+				"image": "/catalogs/1/8202.webp"
+			},
+			{
+				"id": "8203",
+				"image": "/catalogs/1/8203.webp"
+			},
+			{
+				"id": "8204",
+				"image": "/catalogs/1/8204.webp"
+			},
+			{
+				"id": "8205",
+				"image": "/catalogs/1/8205.webp"
+			},
+			{
+				"id": "8206",
+				"image": "/catalogs/1/8206.webp"
+			},
+			{
+				"id": "8207",
+				"image": "/catalogs/1/8207.webp"
+			},
+			{
+				"id": "8208",
+				"image": "/catalogs/1/8208.webp"
+			},
+			{
+				"id": "8209",
+				"image": "/catalogs/1/8209.webp"
+			},
+			{
+				"id": "8210",
+				"image": "/catalogs/1/8210.webp"
+			},
+			{
+				"id": "8211",
+				"image": "/catalogs/1/8211.webp"
+			},
+			{
+				"id": "8212",
+				"image": "/catalogs/1/8212.webp"
+			},
+			{
+				"id": "8213",
+				"image": "/catalogs/1/8213.webp"
+			},
+			{
+				"id": "8214",
+				"image": "/catalogs/1/8214.webp"
+			},
+			{
+				"id": "8215",
+				"image": "/catalogs/1/8215.webp"
+			},
+			{
+				"id": "8216",
+				"image": "/catalogs/1/8216.webp"
+			},
+			{
+				"id": "8217",
+				"image": "/catalogs/1/8217.webp"
+			},
+			{
+				"id": "8218",
+				"image": "/catalogs/1/8218.webp"
+			},
+			{
+				"id": "8219",
+				"image": "/catalogs/1/8219.webp"
+			},
+			{
+				"id": "8220",
+				"image": "/catalogs/1/8220.webp"
+			},
+			{
+				"id": "8221",
+				"image": "/catalogs/1/8221.webp"
+			},
+			{
+				"id": "8222",
+				"image": "/catalogs/1/8222.webp"
+			},
+			{
+				"id": "800",
+				"image": "/catalogs/1/800.webp"
+			},
+			{
+				"id": "800",
+				"image": "/catalogs/1/800.webp"
+			},
+			{
+				"id": "8223",
+				"image": "/catalogs/1/8223.webp"
+			},
+			{
+				"id": "8224",
+				"image": "/catalogs/1/8224.webp"
+			},
+			{
+				"id": "8225",
+				"image": "/catalogs/1/8225.webp"
+			},
+			{
+				"id": "8226",
+				"image": "/catalogs/1/8226.webp"
+			},
+			{
+				"id": "8227",
+				"image": "/catalogs/1/8227.webp"
+			},
+			{
+				"id": "8228",
+				"image": "/catalogs/1/8228.webp"
+			},
+			{
+				"id": "8229",
+				"image": "/catalogs/1/8229.webp"
+			},
+			{
+				"id": "8230",
+				"image": "/catalogs/1/8230.webp"
+			},
+			{
+				"id": "8231",
+				"image": "/catalogs/1/8231.webp"
+			},
+			{
+				"id": "8232",
+				"image": "/catalogs/1/8232.webp"
+			},
+			{
+				"id": "8233",
+				"image": "/catalogs/1/8233.webp"
+			},
+			{
+				"id": "8234",
+				"image": "/catalogs/1/8234.webp"
+			},
+			{
+				"id": "8235",
+				"image": "/catalogs/1/8235.webp"
+			},
+			{
+				"id": "8236",
+				"image": "/catalogs/1/8236.webp"
+			},
+			{
+				"id": "8237",
+				"image": "/catalogs/1/8237.webp"
+			},
+			{
+				"id": "8238",
+				"image": "/catalogs/1/8238.webp"
+			},
+			{
+				"id": "8239",
+				"image": "/catalogs/1/8239.webp"
+			},
+			{
+				"id": "8240",
+				"image": "/catalogs/1/8240.webp"
+			},
+			{
+				"id": "8241",
+				"image": "/catalogs/1/8241.webp"
+			},
+			{
+				"id": "8242",
+				"image": "/catalogs/1/8242.webp"
+			},
+			{
+				"id": "8243",
+				"image": "/catalogs/1/8243.webp"
+			},
+			{
+				"id": "8244",
+				"image": "/catalogs/1/8244.webp"
+			},
+			{
+				"id": "8245",
+				"image": "/catalogs/1/8245.webp"
+			},
+			{
+				"id": "8248",
+				"image": "/catalogs/1/8248.webp"
+			},
+			{
+				"id": "8249",
+				"image": "/catalogs/1/8249.webp"
+			},
+			{
+				"id": "8250",
+				"image": "/catalogs/1/8250.webp"
+			},
+			{
+				"id": "8252",
+				"image": "/catalogs/1/8252.webp"
+			},
+			{
+				"id": "8253",
+				"image": "/catalogs/1/8253.webp"
+			},
+			{
+				"id": "8254",
+				"image": "/catalogs/1/8254.webp"
+			}
+		]
+	},
+	"osborn": {
+		"param": "1",
+		"label": "Catalog 2",
+		"name": "Cotton Osborn",
+		"list": [
+			{
+				"id": "",
+				"image": "/catalogs/2/.svg"
+			},
+			{
+				"id": "",
+				"image": "/catalogs/2/.svg"
+			},
+			{
+				"id": "",
+				"image": "/catalogs/2/.svg"
+			}
+		]
+	},
+	"winsome": {
+		"param": "2",
+		"label": "Catalog 3",
+		"name": "Cotton Winsome",
+		"list": [
+			{
+				"id": "",
+				"image": "/catalogs/3/.svg"
+			},
+			{
+				"id": "",
+				"image": "/catalogs/3/.svg"
+			},
+			{
+				"id": "",
+				"image": "/catalogs/3/.svg"
+			}
+		]
+	}
+}

@@ -310,126 +310,29 @@
 		"text": "Обирайте з широкої палітри кольорів і ми створимо для Вас унікальні шкарпетки, які будуть радувати вас кожен день.",
 		"download": "Завантажити каталог",
 		"labelColor": "Код:",
-		"catalog1": {
-			"label": "Каталог 1",
-			"name": "Поліестер (штучна нитка)",
-			"pdfLink": "",
-			"list": [
-				{
-					"id": "1001 - OW",
-					"image": "/catalogs/1/1001-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				},
-				{
-					"id": "1002 - OW",
-					"image": "/catalogs/1/1002-OW.svg"
-				},
-				{
-					"id": "1003 - OW",
-					"image": "/catalogs/1/1003-OW.svg"
-				}
-			]
-		},
-		"catalog2": {
-			"label": "Каталог 2",
-			"name": "Бавовна Osborn",
-			"pdfLink": "",
-			"list": [
-				{
-					"id": "",
-					"image": "/catalogs/2/.svg"
-				},
-				{
-					"id": "",
-					"image": "/catalogs/2/.svg"
-				},
-				{
-					"id": "",
-					"image": "/catalogs/2/.svg"
-				}
-			]
-		},
-		"catalog3": {
-			"label": "Каталог 3",
-			"name": "Бавовна Winsome",
-			"pdfLink": "",
-			"list": [
-				{
-					"id": "",
-					"image": "/catalogs/3/.svg"
-				},
-				{
-					"id": "",
-					"image": "/catalogs/3/.svg"
-				},
-				{
-					"id": "",
-					"image": "/catalogs/3/.svg"
-				}
-			]
-		}
+		"catalogKeys": [
+			{
+				"id": "catalog1",
+				"param": "polyester",
+				"label": "Каталог 1",
+				"name": "Поліестер (штучна нитка)",
+				"pdfLink": ""
+			},
+			{
+				"id": "catalog2",
+				"param": "osborn",
+				"label": "Каталог 2",
+				"name": "Бавовна Osborn",
+				"pdfLink": ""
+			},
+			{
+				"id": "catalog3",
+				"param": "winsome",
+				"label": "Каталог 3",
+				"name": "Бавовна Winsome",
+				"pdfLink": ""
+			}
+		],
+		"catalogsLink": "/catalogs/config-ua.json"
 	}
 }
