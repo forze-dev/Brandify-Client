@@ -1,6 +1,6 @@
 "use client"
-import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import "./CatalogMaterials.scss"
@@ -8,43 +8,66 @@ import "./CatalogMaterials.scss"
 const CatalogMaterials = () => {
 	const router = useRouter();
 	const searchParams = useSearchParams();
+	const currentLocale = useLocale();
 	const tSM = useTranslations("materials");
 
-	const catalogKeys = tSM.raw("catalogKeys");
-	const catalogLink = tSM.raw("catalogsLink");
+	const catalogKeys = useMemo(() => tSM.raw("catalogKeys"), [tSM]);
+	const catalogLink = useMemo(() => tSM.raw("catalogsLink"), [tSM]);
+	const defaultCatalog = useMemo(() => catalogKeys[0].param, [catalogKeys]);
 
-	const [activeCatalog, setActiveCatalog] = useState(catalogKeys[0].param);
-	const [catalogData, setCatalogData] = useState(null);
-
-	useEffect(() => {
+	// Отримання параметра з URL або використання значення за замовчуванням
+	const initialCatalog = useMemo(() => {
 		const catalogParam = searchParams.get("catalog");
-		const defaultCatalog = catalogKeys[0].param;
+		return catalogParam && catalogKeys.some(cat => cat.param === catalogParam)
+			? catalogParam
+			: defaultCatalog;
+	}, [searchParams, catalogKeys, defaultCatalog]);
 
-		if (catalogParam && catalogKeys.some(cat => cat.param === catalogParam)) {
-			setActiveCatalog(catalogParam);
-		} else {
-			setActiveCatalog(defaultCatalog);
-		}
+	const [activeCatalog, setActiveCatalog] = useState(initialCatalog);
+	const [allCatalogsData, setAllCatalogsData] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+	const [hasError, setHasError] = useState(false);
 
+	// Завантаження даних при монтуванні компонента та при зміні мови
+	useEffect(() => {
+		setIsLoading(true);
+		setHasError(false);
 		fetch(catalogLink)
 			.then((res) => res.json())
 			.then((catalogs) => {
-				setCatalogData(catalogs[activeCatalog] || null);
+				setAllCatalogsData(catalogs);
+				setIsLoading(false);
 			})
-			.catch(() => {
-				setCatalogData(false);
+			.catch((error) => {
+				console.error("Помилка завантаження каталогів:", error);
+				setHasError(true);
+				setIsLoading(false);
 			});
-	}, [searchParams, activeCatalog, catalogLink, catalogKeys]);
+	}, [catalogLink, currentLocale]);
 
-	const handleCatalogToggle = (catalogParam) => {
+	// Синхронізація URL з активним каталогом
+	useEffect(() => {
+		const catalogParam = searchParams.get("catalog");
+		if (catalogParam !== activeCatalog && catalogKeys.some(cat => cat.param === catalogParam)) {
+			setActiveCatalog(catalogParam);
+		}
+	}, [searchParams, activeCatalog, catalogKeys]);
+
+	// Мемоізований обробник зміни каталогу
+	const handleCatalogToggle = useCallback((catalogParam) => {
 		setActiveCatalog(catalogParam);
 		const params = new URLSearchParams(searchParams.toString());
 		params.set("catalog", catalogParam);
 		router.push(`?${params.toString()}`, { scroll: false });
-	};
+	}, [router, searchParams]);
 
-	if (catalogData === null) return "Loading...";
-	if (catalogData === false) return null
+	// Мемоізовані дані активного каталогу
+	const catalogData = useMemo(() => {
+		return allCatalogsData?.[activeCatalog] || null;
+	}, [allCatalogsData, activeCatalog]);
+
+	if (isLoading) return <div className="catalog-materials__loader">Loading...</div>;
+	if (hasError || !catalogData) return null;
 
 	return (
 		<section className="catalog-materials">
@@ -70,14 +93,12 @@ const CatalogMaterials = () => {
 
 					<div className="catalog-materials__catalog">
 						<ul className="catalog-materials__list">
-							{Array.isArray(catalogData.list) && (
-								catalogData.list.map((item, index) => (
-									<li key={item.id + index} className="catalog-materials__item">
-										<Image src={item.image} width={116} height={90} alt={item.id + "-photo"} />
-										<span>{tSM("labelColor") + " " + item.id}</span>
-									</li>
-								))
-							)}
+							{Array.isArray(catalogData.list) && catalogData.list.map((item, index) => (
+								<li key={`${item.id}-${index}`} className="catalog-materials__item">
+									<Image src={item.image} width={116} height={90} alt={`${item.id}-photo`} />
+									<span>{`${tSM("labelColor")} ${item.id}`}</span>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>
