@@ -12,7 +12,8 @@
 			margin-right: auto;
 		}
 		span {
-			font-size: 14px;
+			font-size: 12px;
+			font-weight: 500;
 		}
 		img {
 			background: var(--litegray);
@@ -83,6 +84,10 @@
 			}
 			li:last-child {
 				margin-right: auto;
+			}
+			span {
+				font-size: 10px;
+				font-weight: 500;
 			}
 			img {
 				background: var(--litegray);
