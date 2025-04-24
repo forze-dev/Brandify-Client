@@ -7,19 +7,24 @@ import { useTranslations } from "next-intl"
 import Image from "next/image"
 
 
-const Navigation = ({ isPanel, openPanel, setOpenPanel }) => {
+const Navigation = ({ isPanel, openPanel, setOpenPanel, setOpenedBurgerMenu }) => {
 
 	const tNav = useTranslations('nav');
 	const tDrops = useTranslations('dropdowns');
-	const dropdownItems = tDrops.raw('drop1').map(el => <Link key={el.id} href={el.path || "/"} className="dropdown-link">{el.label}</Link>);
+
+	const handleCloseModal = () => {
+		setOpenedBurgerMenu && setOpenedBurgerMenu(false)
+	}
+
+	const dropdownItems = tDrops.raw('drop1').map(el => <Link key={el.id} href={el.path || "/"} className="dropdown-link" onClick={handleCloseModal} >{el.label}</Link>);
 
 	return (
 		<ul className="navigation__list">
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link">{tNav("toHome")}</Link>
+				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toHome")}</Link>
 			</li>
 
-			<li className="navigation__item navigation__item-drop">
+			<li className="navigation__item navigation__item-drop" >
 				<Dropdown withMarker={true} dropLabel={tNav("toProds")} dropList={dropdownItems} />
 			</li>
 
@@ -40,23 +45,23 @@ const Navigation = ({ isPanel, openPanel, setOpenPanel }) => {
 			}
 
 			<li className="navigation__item">
-				<Link href="/sock-materials" className="navigation__link">{tNav("toMaterials")}</Link>
+				<Link href="/sock-materials" className="navigation__link" onClick={handleCloseModal}>{tNav("toMaterials")}</Link>
 			</li>
 
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link">{tNav("toReviews")}</Link>
+				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toReviews")}</Link>
 			</li>
 
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link">{tNav("toAbout")}</Link>
+				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toAbout")}</Link>
 			</li>
 
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link">{tNav("toOurWorks")}</Link>
+				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toOurWorks")}</Link>
 			</li>
 
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link">{tNav("toJob")}</Link>
+				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toJob")}</Link>
 			</li>
 		</ul>
 	)

@@ -42,7 +42,7 @@ const Header = () => {
 					}
 
 					<nav className={`navigation ${openedBurgerMenu ? "active" : ""}`}>
-						<Navigation isPanel={true} openPanel={openPanel} setOpenPanel={setOpenPanel} />
+						<Navigation isPanel={true} openPanel={openPanel} setOpenPanel={setOpenPanel} setOpenedBurgerMenu={setOpenedBurgerMenu} />
 					</nav>
 
 					<LanguageSwitcher />

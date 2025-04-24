@@ -310,6 +310,8 @@
 		"text": "Choose from a wide range of colors and we will create unique socks for you that will brighten your day.",
 		"download": "Download Catalog",
 		"labelColor": "Code:",
+		"searchPlaceholder": "Search color",
+		"noResults": "Color is not defined",
 		"catalogKeys": [
 			{
 				"id": "catalog1",

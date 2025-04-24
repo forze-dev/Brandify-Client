@@ -3,6 +3,7 @@
 		"param": "polyester",
 		"label": "Catalog 1",
 		"name": "Polyester (synthetic yarn)",
+		"pdfLink": "/catalogs/КАТАЛОГ-1.pdf",
 		"list": [
 			{
 				"id": "8001",
@@ -926,6 +927,7 @@
 		"param": "osborn",
 		"label": "Catalog 2",
 		"name": "Cotton Osborn",
+		"pdfLink": "/catalogs/КАТАЛОГ-2.pdf",
 		"list": [
 			{
 				"id": "0266-M",
@@ -3125,6 +3127,7 @@
 		"param": "winsome",
 		"label": "Catalog 3",
 		"name": "Cotton Winsome",
+		"pdfLink": "/catalogs/КАТАЛОГ-3.pdf",
 		"list": [
 			{
 				"id": "00001",

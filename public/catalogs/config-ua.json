@@ -3,6 +3,7 @@
 		"param": "polyester",
 		"label": "Каталог 1",
 		"name": "Поліестер (штучна нитка)",
+		"pdfLink": "/catalogs/КАТАЛОГ-1.pdf",
 		"list": [
 			{
 				"id": "8001",
@@ -926,6 +927,7 @@
 		"param": "osborn",
 		"label": "Каталог 2",
 		"name": "Бавовна Osborn",
+		"pdfLink": "/catalogs/КАТАЛОГ-2.pdf",
 		"list": [
 			{
 				"id": "0266-M",
@@ -3125,6 +3127,7 @@
 		"param": "winsome",
 		"label": "Каталог 3",
 		"name": "Бавовна Winsome",
+		"pdfLink": "/catalogs/КАТАЛОГ-3.pdf",
 		"list": [
 			{
 				"id": "00001",
