@@ -1,6 +1,7 @@
 import { routing } from '@/i18n/routing';
 import HeroSockMaterials from '@/sections/sock-materials/HeroSockMaterials/HeroSockMaterials';
 import CatalogMaterials from '@/sections/sock-materials/CatalogMaterials/CatalogMaterials';
+import Loader from '@/components/Loader/Loader';
 import { Suspense } from 'react';
 
 export function generateStaticParams() {
@@ -23,7 +24,7 @@ export default function MaterialsPage() {
 	return (
 		<main>
 			<HeroSockMaterials />
-			<Suspense fallback={<div>Завантаження матеріалів...</div>}>
+			<Suspense fallback={<Loader position={"center"} />}>
 				<CatalogMaterials />
 			</Suspense>
 		</main>

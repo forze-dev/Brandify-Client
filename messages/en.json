@@ -336,5 +336,10 @@
 			}
 		],
 		"catalogsLink": "/catalogs/config-en.json"
+	},
+	"portfolioPage": {
+		"title": "Our Works",
+		"subtitle": "Browse examples of our successful orders and create your unique design! We have created and produced over 10,000 trendy sock designs for real clients!",
+		"contentLink": "/portfolio/portfolio-en.json"
 	}
 }
