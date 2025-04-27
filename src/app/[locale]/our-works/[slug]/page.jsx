@@ -1,6 +1,5 @@
 import { routing } from '@/i18n/routing';
-import Loader from '@/components/Loader/Loader';
-import { Suspense } from 'react';
+import SoloProject from '@/sections/portfolio/SoloProject/SoloProject';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -21,8 +20,7 @@ export async function generateMetadata({ params }) {
 export default function SoloWorkPage() {
 	return (
 		<main>
-			<Suspense fallback={<Loader position={"center"} />}>
-			</Suspense>
+			<SoloProject />
 		</main>
 	);
 }

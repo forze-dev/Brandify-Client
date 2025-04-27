@@ -1,6 +1,4 @@
 import { routing } from '@/i18n/routing';
-import Loader from '@/components/Loader/Loader';
-import { Suspense } from 'react';
 import PortfolioList from '@/sections/portfolio/PortfolioList/PortfolioList';
 
 export function generateStaticParams() {
@@ -22,9 +20,7 @@ export async function generateMetadata({ params }) {
 export default function OurWorksPage() {
 	return (
 		<main>
-			{/* <Suspense fallback={<Loader position={"center"} />}> */}
 			<PortfolioList />
-			{/* </Suspense> */}
 		</main>
 	);
 }

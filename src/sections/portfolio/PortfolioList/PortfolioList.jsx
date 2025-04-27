@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import ContactButton from "@/components/ContactButton/ContactButton";
+import "./PortfolioList.scss"
 
 const PortfolioList = () => {
 	const tPP = useTranslations("portfolioPage");
