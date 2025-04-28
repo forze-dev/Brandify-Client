@@ -37,7 +37,7 @@ const PortfolioList = () => {
 		<section className="PortfolioList">
 			<div className="container">
 				<h1>{tPP("title")}</h1>
-				<p>{tPP("subtitle")}</p>
+				<p>{tPP("subtitle").replace('10 000', '10\u00A0000')}</p>
 				<ContactButton text={tCM("btn2")} />
 
 
