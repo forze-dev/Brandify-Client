@@ -1,17 +1,18 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import './ContactForm.scss';
 
-const ContactForm = () => {
+const ContactForm = ({ alternate = false }) => {
 	const t = useTranslations('form');
 	const { register, handleSubmit, formState: { errors }, reset } = useForm();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState(null);
 	const [selectedFile, setSelectedFile] = useState(null);
+	const formId = useId(); // унікальний id для кожної форми
 
 	const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
@@ -53,7 +54,7 @@ const ContactForm = () => {
 				throw new Error(`${t('errors.serverError')} ${response.status}`);
 			}
 
-			const result = await response.json();
+			await response.json();
 			setSubmitStatus('success');
 			reset();
 			setSelectedFile(null);
@@ -66,7 +67,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div className="ContactForm">
+		<div className={`ContactForm ${alternate ? "alternate" : ""}`}>
 			<div className="ContactForm__title">
 				<h2>{t('title')}</h2>
 				<p>{t('subtitle')}</p>
@@ -76,7 +77,7 @@ const ContactForm = () => {
 				<div className="form-top__group">
 					<div className="form-group">
 						<input
-							id="lastName"
+							id={`${formId}-lastName`}
 							type="text"
 							placeholder={t('place.p1')}
 							{...register('lastName', { required: t('errors.lastName') })}
@@ -87,7 +88,7 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						<input
-							id="firstName"
+							id={`${formId}-firstName`}
 							type="text"
 							placeholder={t('place.p2')}
 							{...register('firstName', { required: t('errors.firstName') })}
@@ -98,7 +99,7 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						<input
-							id="phone"
+							id={`${formId}-phone`}
 							type="tel"
 							{...register('phone', {
 								required: t('errors.phone'),
@@ -115,7 +116,7 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						<input
-							id="email"
+							id={`${formId}-email`}
 							type="email"
 							{...register('email', {
 								required: t('errors.email'),
@@ -133,7 +134,7 @@ const ContactForm = () => {
 
 				<div className="form-group form-comment">
 					<textarea
-						id="comment"
+						id={`${formId}-comment`}
 						{...register('comment')}
 						rows="1"
 						placeholder={t('place.p5')}
@@ -142,28 +143,33 @@ const ContactForm = () => {
 
 				<div className="form-row form-file">
 					<input
-						id="file"
+						id={`${formId}-file`}
 						type="file"
 						onChange={onFileChange}
 						className="file-input"
 					/>
 					{
-						selectedFile ?
+						selectedFile ? (
 							<div className="file-info">
 								<span>{selectedFile.name}</span>
-							</div> :
-							<label htmlFor="file">
-								<Image src={"/icons/screpka.svg"} width={18} height={18} alt='@' />
-								<span>
-									{t('file')}
-								</span>
+							</div>
+						) : (
+							<label htmlFor={`${formId}-file`}>
+								<Image src={"/icons/screpka.svg"} width={18} height={18} alt="@" />
+								<span>{t('file')}</span>
 							</label>
+						)
 					}
 				</div>
 
 				<div className="form-row form-agree">
-					<input type="checkbox" name="agree" id="agree" className="agree-input" />
-					<label htmlFor="agree">{t('confirm')}</label>
+					<input
+						type="checkbox"
+						name="agree"
+						id={`${formId}-agree`}
+						className="agree-input"
+					/>
+					<label htmlFor={`${formId}-agree`}>{t('confirm')}</label>
 				</div>
 
 				<button
@@ -172,7 +178,10 @@ const ContactForm = () => {
 					disabled={isSubmitting}
 				>
 					{isSubmitting ? t('button.sending') :
-						<><span>{t('button.submit')}</span><Image src={"/icons/white-plane.svg"} width={18} height={15} alt='->' /></>
+						<>
+							<span>{t('button.submit')}</span>
+							<Image src={"/icons/white-plane.svg"} width={18} height={15} alt="->" />
+						</>
 					}
 				</button>
 

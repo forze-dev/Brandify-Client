@@ -5,10 +5,10 @@
 		"link": "socks-for-dimria",
 		"mainImage": "/images/portfolio/1.webp",
 		"images": [
+			"/images/portfolio/1.webp",
 			"/images/portfolio/1-1.webp",
 			"/images/portfolio/1-2.webp",
-			"/images/portfolio/1-3.webp",
-			"/images/portfolio/1-4.webp"
+			"/images/portfolio/1-3.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для DIM.RIA",
 		"texts": [
@@ -46,10 +46,10 @@
 		"link": "socks-for-bodyfactory",
 		"mainImage": "/images/portfolio/3.webp",
 		"images": [
+			"/images/portfolio/3.webp",
 			"/images/portfolio/3-1.webp",
 			"/images/portfolio/3-2.webp",
-			"/images/portfolio/3-3.webp",
-			"/images/portfolio/3-4.webp"
+			"/images/portfolio/3-3.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для BodyFactory",
 		"texts": [
@@ -69,7 +69,7 @@
 			"/images/portfolio/4-1.webp",
 			"/images/portfolio/4-2.webp",
 			"/images/portfolio/4-3.webp",
-			"/images/portfolio/4-4.webp"
+			"/images/portfolio/4.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для Art Dance",
 		"texts": [
@@ -87,10 +87,9 @@
 		"link": "socks-for-yasensvit",
 		"mainImage": "/images/portfolio/5.webp",
 		"images": [
+			"/images/portfolio/5.webp",
 			"/images/portfolio/5-1.webp",
-			"/images/portfolio/5-2.webp",
-			"/images/portfolio/5-3.webp",
-			"/images/portfolio/5-4.webp"
+			"/images/portfolio/5-2.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для Ясенсвіт",
 		"texts": [
@@ -108,10 +107,10 @@
 		"link": "socks-for-fckl",
 		"mainImage": "/images/portfolio/6.webp",
 		"images": [
+			"/images/portfolio/6.webp",
 			"/images/portfolio/6-1.webp",
 			"/images/portfolio/6-2.webp",
-			"/images/portfolio/6-3.webp",
-			"/images/portfolio/6-4.webp"
+			"/images/portfolio/6-3.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для FCKL",
 		"texts": [
@@ -149,10 +148,10 @@
 		"link": "socks-for-intellias",
 		"mainImage": "/images/portfolio/8.webp",
 		"images": [
+			"/images/portfolio/8.webp",
 			"/images/portfolio/8-1.webp",
 			"/images/portfolio/8-2.webp",
-			"/images/portfolio/8-3.webp",
-			"/images/portfolio/8-4.webp"
+			"/images/portfolio/8-3.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для Intellias",
 		"texts": [
@@ -169,10 +168,10 @@
 		"link": "socks-for-allo",
 		"mainImage": "/images/portfolio/9.webp",
 		"images": [
+			"/images/portfolio/9.webp",
 			"/images/portfolio/9-1.webp",
 			"/images/portfolio/9-2.webp",
-			"/images/portfolio/9-3.webp",
-			"/images/portfolio/9-4.webp"
+			"/images/portfolio/9-3.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для Алло",
 		"texts": [
@@ -189,10 +188,7 @@
 		"link": "socks-for-flames",
 		"mainImage": "/images/portfolio/10.webp",
 		"images": [
-			"/images/portfolio/10-1.webp",
-			"/images/portfolio/10-2.webp",
-			"/images/portfolio/10-3.webp",
-			"/images/portfolio/10-4.webp"
+			"/images/portfolio/10.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для Flames",
 		"texts": [
@@ -210,10 +206,9 @@
 		"link": "socks-for-mfit",
 		"mainImage": "/images/portfolio/11.webp",
 		"images": [
-			"/images/portfolio/11-1.webp",
+			"/images/portfolio/11.webp",
 			"/images/portfolio/11-2.webp",
-			"/images/portfolio/11-3.webp",
-			"/images/portfolio/11-4.webp"
+			"/images/portfolio/11-3.webp"
 		],
 		"fullTitle": "Індивідуальні шкарпетки з дизайном для MFIT",
 		"texts": [
@@ -231,7 +226,7 @@
 		"link": "socks-for-miygadget",
 		"mainImage": "/images/portfolio/12.webp",
 		"images": [
-			"/images/portfolio/12-1.webp",
+			"/images/portfolio/12.webp",
 			"/images/portfolio/12-2.webp",
 			"/images/portfolio/12-3.webp",
 			"/images/portfolio/12-4.webp"

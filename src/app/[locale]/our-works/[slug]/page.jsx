@@ -1,5 +1,6 @@
 import { routing } from '@/i18n/routing';
 import SoloProject from '@/sections/portfolio/SoloProject/SoloProject';
+import SoloProjectForm from '@/sections/portfolio/SoloProjectForm/SoloProjectForm';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -21,6 +22,7 @@ export default function SoloWorkPage() {
 	return (
 		<main>
 			<SoloProject />
+			<SoloProjectForm />
 		</main>
 	);
 }
