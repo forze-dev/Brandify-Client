@@ -1,0 +1,25 @@
+{
+	"videoList": [
+		{
+			"id": 1,
+			"link": "https://www.youtube.com/embed/lh_F-2HVwTk?si=oxPws6y4yi79xaqf",
+			"poster": "/reviews/wall/image.webp",
+			"title": "Brandify x Differ sport",
+			"text": "This time, we are visiting our regular and one of our very first clients – Differ Sport ♥️"
+		},
+		{
+			"id": 2,
+			"link": "https://www.youtube.com/embed/Ds-2L-z7gks?si=1RRBq3Az8Xj7Zhhf",
+			"poster": "/reviews/wall/image-2.webp",
+			"title": "Brandity x Popkornwear",
+			"text": "An interview with our client Yurii Kornyliuk for Popkornwear"
+		},
+		{
+			"id": 3,
+			"link": "https://www.youtube.com/embed/Kj8saLZ2apk?si=IniKd8Fact6v9kTb",
+			"poster": "/reviews/wall/image-1.webp",
+			"title": "Brandity x MFIT",
+			"text": "This time, we're visiting our client MFIT"
+		}
+	]
+}
