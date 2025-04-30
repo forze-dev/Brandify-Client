@@ -1,121 +1,179 @@
 "use client"
-import 'swiper/css';
+import { useState, useRef, useEffect } from "react";
 import "./Screens.scss"
+import { useTranslations } from "next-intl";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow } from 'swiper/modules';
-import { useTranslations, useLocale } from "next-intl";
-import { useMemo, useState, useEffect, useRef } from 'react';
-import Loader from '@/components/Loader/Loader';
-
-const Screens = () => {
+const Screens = ({ screenList }) => {
 	const tRP = useTranslations("reviewsPage")
-	const currentLocale = useLocale();
-	const reviewsLink = useMemo(() => tRP.raw("contentLink"), [tRP]);
-	const swiperRef = useRef(null);
+	const [activeScreen, setActiveScreen] = useState(null)
+	const [animationStyle, setAnimationStyle] = useState({})
+	const overlayRef = useRef(null)
+	const activeImgRef = useRef(null)
+	const imageRefs = useRef([])
 
-	const [isLoading, setIsLoading] = useState(true);
-	const [hasError, setHasError] = useState(false);
-	const [videoList, setVideoList] = useState(null)
-	const [activeVideoIndex, setActiveVideoIndex] = useState(null);
+	const handleImageClick = (index, e) => {
+		if (activeScreen === index) {
+			setActiveScreen(null);
+		} else {
+			const clickedImg = imageRefs.current[index];
+			if (clickedImg) {
+				const rect = clickedImg.getBoundingClientRect();
+				const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+				// Calculate the position relative to viewport
+				const startPosition = {
+					top: rect.top,
+					left: rect.left,
+					width: rect.width,
+					height: rect.height,
+					centerX: rect.left + rect.width / 2,
+					centerY: rect.top + rect.height / 2 + scrollTop,
+				};
 
-	useEffect(() => {
-		setIsLoading(true);
-		setHasError(false);
-		fetch(reviewsLink)
-			.then((res) => res.json())
-			.then((res) => {
-				setVideoList(res.videoList);
-				setIsLoading(false);
-			})
-			.catch((error) => {
-				console.error("Помилка завантаження:", error);
-				setHasError(true);
-				setIsLoading(false);
-			});
-	}, [reviewsLink, currentLocale]);
+				setAnimationStyle({
+					top: `${startPosition.top}px`,
+					left: `${startPosition.left}px`,
+					width: `${startPosition.width}px`,
+					height: `${startPosition.height}px`,
+					transform: 'none'
+				});
 
-	const renderFrame = (link, isActive) => {
-		const autoplayLink = isActive
-			? `${link}${link.includes('?') ? '&' : '?'}autoplay=1`
-			: '';
-		return isActive ? (
-			<iframe
-				width="390"
-				height="430"
-				src={autoplayLink}
-				title="YouTube video player"
-				frameBorder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				referrerPolicy="strict-origin-when-cross-origin"
-				allowFullScreen
-			></iframe>
-		) : null;
+				// Set active screen after setting initial position
+				setTimeout(() => {
+					setActiveScreen(index);
+					// Apply transition after a small delay to ensure the initial position is set
+					setTimeout(() => {
+						setAnimationStyle({
+							top: '50%',
+							left: '50%',
+							width: '100%',
+							maxWidth: '80%',
+							maxHeight: '90vh',
+							transform: 'translate(-50%, -50%)'
+						});
+					}, 10);
+				}, 0);
+			}
+		}
 	};
 
+	const closeOverlay = () => {
+		if (activeScreen !== null) {
+			const activeImg = imageRefs.current[activeScreen];
+			if (activeImg) {
+				const rect = activeImg.getBoundingClientRect();
+				const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+				// Animate back to original position
+				setAnimationStyle({
+					top: `${rect.top}px`,
+					left: `${rect.left}px`,
+					width: `${rect.width}px`,
+					height: `${rect.height}px`,
+					transform: 'none'
+				});
+
+				// Complete the animation before hiding
+				setTimeout(() => {
+					setActiveScreen(null);
+				}, 300);
+			} else {
+				setActiveScreen(null);
+			}
+		}
+	};
+
+	// Handle click outside and other interactions
+	useEffect(() => {
+		const handleClickOutside = (e) => {
+			if (activeScreen !== null && overlayRef.current && !activeImgRef.current?.contains(e.target)) {
+				closeOverlay();
+			}
+		};
+
+		const handleKeyDown = (e) => {
+			if (e.key === 'Escape' && activeScreen !== null) {
+				closeOverlay();
+			}
+		};
+
+		let touchStartX = 0;
+		let touchEndX = 0;
+
+		const handleTouchStart = (e) => {
+			touchStartX = e.changedTouches[0].screenX;
+		};
+
+		const handleTouchEnd = (e) => {
+			touchEndX = e.changedTouches[0].screenX;
+			if (Math.abs(touchEndX - touchStartX) > 50) {
+				closeOverlay();
+			}
+		};
+
+		if (activeScreen !== null) {
+			document.addEventListener('mousedown', handleClickOutside);
+			document.addEventListener('keydown', handleKeyDown);
+			document.addEventListener('touchstart', handleTouchStart);
+			document.addEventListener('touchend', handleTouchEnd);
+			document.body.style.overflow = 'hidden';
+		}
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+			document.removeEventListener('keydown', handleKeyDown);
+			document.removeEventListener('touchstart', handleTouchStart);
+			document.removeEventListener('touchend', handleTouchEnd);
+			document.body.style.overflow = '';
+		};
+	}, [activeScreen]);
+
 	return (
-		<section className="feeVideos">
+		<section className="feeScreens">
 			<div className="container">
-				<h1>{tRP("videoTitle")}</h1>
-				{
-					isLoading ? <Loader position={"center"} /> : hasError || !videoList ? (
-						<div className="error-message">Some went Error</div>
-					) :
-						<div className="feeVideos__slider">
-							<Swiper
-								effect={'coverflow'}
-								grabCursor={true}
-								centeredSlides={true}
-								slidesPerView={"auto"}
-								initialSlide={1}
-								onSwiper={(swiper) => (swiperRef.current = swiper)}
-								spaceBetween={0}
-								coverflowEffect={{
-									rotate: 0,
-									stretch: -10,
-									depth: 40,
-									modifier: 3,
-									slideShadows: true,
-									scale: 1
-								}}
-								modules={[EffectCoverflow]}
-								breakpoints={{
-									768: {
-										spaceBetween: 20
-									}
-								}}
-								className="feeVideos-swiper"
-							>
-								{
-									videoList.map((video, index) => (
-										<SwiperSlide key={index} onClick={() => {
-											if (swiperRef.current) {
-												swiperRef.current.slideTo(index);
-												setActiveVideoIndex(index);
-											}
-										}}>
-											<div
-												className="video-slider__item"
-												style={{ background: `url(${video.poster}) 0 0/cover no-repeat` }}
-											>
-												<div className="video-slider__item-bottom">
-													<h2>{video.title}</h2>
-													<span>{video.text}</span>
-												</div>
-												<div className={`video-slider__item-frame ${activeVideoIndex === index ? "show" : ""}`}>
-													{
-														renderFrame(video.link, activeVideoIndex === index)
-													}
-												</div>
-											</div>
-										</SwiperSlide>
-									))
-								}
-							</Swiper>
-						</div>
-				}
+				<h2>{tRP("screenTitle")}</h2>
+				<div className="feeScreens__list">
+					{screenList && screenList.map((img, index) => {
+						return (
+							<div key={index + "-rev-screen"} className="feeScreens-item">
+								<div className={`feeScreens-item__wrapper ${activeScreen === index ? "active-placeholder" : ""}`}>
+									<img
+										src={img}
+										alt="reviews"
+										loading="lazy"
+										width={300}
+										height={300}
+										onClick={(e) => handleImageClick(index, e)}
+										ref={el => imageRefs.current[index] = el}
+									/>
+								</div>
+							</div>
+						)
+					})}
+				</div>
 			</div>
+
+			{activeScreen !== null && (
+				<div className="feeScreens-overlay" ref={overlayRef}>
+					<div
+						className="feeScreens-overlay__content"
+						ref={activeImgRef}
+						onClick={() => closeOverlay()}
+						style={{
+							...animationStyle,
+							position: 'absolute',
+							transition: 'all 0.3s ease'
+						}}
+					>
+						<img
+							src={screenList[activeScreen]}
+							alt="reviews enlarged"
+							className="feeScreens-overlay__image"
+							style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+						/>
+					</div>
+				</div>
+			)}
 		</section>
 	)
 }

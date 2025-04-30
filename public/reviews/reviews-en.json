@@ -21,5 +21,20 @@
 			"title": "Brandity x MFIT",
 			"text": "This time, we're visiting our client MFIT"
 		}
+	],
+	"screenList": [
+		"/reviews/screens/1.webp",
+		"/reviews/screens/3.webp",
+		"/reviews/screens/2.webp",
+		"/reviews/screens/4.webp",
+		"/reviews/screens/5.webp",
+		"/reviews/screens/6.webp",
+		"/reviews/screens/7.webp",
+		"/reviews/screens/8.webp",
+		"/reviews/screens/9.webp",
+		"/reviews/screens/10.webp",
+		"/reviews/screens/11.webp",
+		"/reviews/screens/12.webp",
+		"/reviews/screens/13.webp"
 	]
 }
