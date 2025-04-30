@@ -52,7 +52,7 @@ const PortfolioList = () => {
 									<div key={card.id} className="PortfolioList__card">
 										<Link href={`/our-works/${card.link}`}>
 											<Image src={card.mainImage} alt={card.title} width={390} height={390} />
-											<span>{card.title}</span>
+											<span>{card.title} <Image src={"/icons/custom-arrow.svg"} alt="-->" width={30} height={30} /></span>
 										</Link>
 									</div>
 								)
