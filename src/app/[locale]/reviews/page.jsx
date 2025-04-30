@@ -1,5 +1,5 @@
 import { routing } from '@/i18n/routing';
-import Videos from '@/sections/feedbacks/Videos/Videos';
+import ReviewsWrapper from '@/sections/feedbacks/FeedbacksWrapper/FeedbacksWrapper';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
 export default function ReviewsPage() {
 	return (
 		<main>
-			<Videos />
+			<ReviewsWrapper />
 		</main>
 	);
 }

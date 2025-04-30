@@ -18,15 +18,38 @@
 		position: relative;
 	}
 
+	.video-overlay {
+		display: none;
+	}
+
+	.video-overlay.show {
+		display: block;
+		background: transparent;
+		position: absolute;
+		top: 10%;
+		left: 0;
+		width: 100%;
+		height: 80%;
+		z-index: 3;
+	}
+
 	.video-slider__item-frame {
 		width: 100%;
 		height: 100%;
 		position: relative;
 		z-index: 2;
 		opacity: 0;
-		iframe {
+		.iframe-wrapper {
 			width: 100%;
 			height: 100%;
+			position: relative;
+			pointer-events: none; // 👈 важливо: не блокує свайп
+
+			iframe {
+				width: 100%;
+				height: 100%;
+				pointer-events: auto; // 👈 але iframe працює
+			}
 		}
 	}
 
