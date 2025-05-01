@@ -44,7 +44,7 @@ const Videos = ({ videoList }) => {
 		if (activeVideoIndex !== null) {
 			playTimeout = setTimeout(() => {
 				playVideo();
-			}, 150);
+			}, 300);
 		}
 
 		// Очистити таймер при деактивації відео
