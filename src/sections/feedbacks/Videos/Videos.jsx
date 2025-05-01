@@ -5,23 +5,65 @@ import "./Videos.scss"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
 import { useTranslations } from "next-intl";
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const Videos = ({ videoList }) => {
 	const swiperRef = useRef(null);
 	const [activeVideoIndex, setActiveVideoIndex] = useState(null);
+	const iframeRef = useRef(null);
 	const tRP = useTranslations("reviewsPage");
 
+	// Функція для додавання параметру enablejsapi до URL
+	const getYoutubeUrlWithJsApi = (url) => {
+		return `${url}${url.includes('?') ? '&' : '?'}enablejsapi=1`;
+	};
+
+	// Функція для відправки команди на відтворення відео
+	const playVideo = () => {
+		if (iframeRef.current) {
+			try {
+				// Відправляємо команду на відтворення відео через postMessage
+				iframeRef.current.contentWindow.postMessage(
+					JSON.stringify({
+						event: 'command',
+						func: 'playVideo',
+						args: []
+					}),
+					'*'
+				);
+			} catch (error) {
+				console.error('Помилка при спробі відтворення відео:', error);
+			}
+		}
+	};
+
+	// Ефект для запуску відео з затримкою після його активації
+	useEffect(() => {
+		let playTimeout;
+
+		if (activeVideoIndex !== null) {
+			playTimeout = setTimeout(() => {
+				playVideo();
+			}, 150);
+		}
+
+		// Очистити таймер при деактивації відео
+		return () => {
+			if (playTimeout) {
+				clearTimeout(playTimeout);
+			}
+		};
+	}, [activeVideoIndex]);
+
 	const renderFrame = (link, isActive) => {
-		const autoplayLink = isActive
-			? `${link}${link.includes('?') ? '&' : '?'}autoplay=1`
-			: '';
+		const videoUrl = getYoutubeUrlWithJsApi(link);
 
 		return (
 			<div className="iframe-wrapper">
 				{isActive && (
 					<iframe
-						src={autoplayLink}
+						ref={iframeRef}
+						src={videoUrl}
 						title="YouTube video player"
 						frameBorder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -38,7 +80,15 @@ const Videos = ({ videoList }) => {
 		setActiveVideoIndex(null);
 	};
 
-	if (!videoList) return null
+	// Функція для обробки кліку на відео
+	const handleVideoClick = (index) => {
+		if (swiperRef.current) {
+			swiperRef.current.slideTo(index);
+			setActiveVideoIndex(index);
+		}
+	};
+
+	if (!videoList) return null;
 
 	return (
 		<section className="feeVideos">
@@ -72,12 +122,7 @@ const Videos = ({ videoList }) => {
 					>
 						{
 							videoList.map((video, index) => (
-								<SwiperSlide key={index} onClick={() => {
-									if (swiperRef.current) {
-										swiperRef.current.slideTo(index);
-										setActiveVideoIndex(index);
-									}
-								}}>
+								<SwiperSlide key={index} onClick={() => handleVideoClick(index)}>
 									<div
 										className="video-slider__item"
 										style={{ background: `url(${video.poster}) 0 0/cover no-repeat` }}
@@ -102,7 +147,7 @@ const Videos = ({ videoList }) => {
 				</div>
 			</div>
 		</section>
-	)
+	);
 }
 
-export default Videos
+export default Videos;
