@@ -1,0 +1,108 @@
+section.AboutPluses {
+	background: var(--grayLight);
+	padding: 100px 0;
+	.container {
+		max-width: 1400px;
+	}
+	h2 {
+		text-align: center;
+		font-size: 40px;
+		margin-bottom: 40px;
+	}
+
+	.AboutPluses__cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		cursor: crosshair;
+	}
+
+	.AboutPluses__card {
+		width: 250px;
+		height: 280px;
+		border-radius: 8px;
+		padding: 20px 20px 30px 20px;
+		text-align: center;
+		color: white;
+		transition: all 0.3s;
+		box-shadow: var(--shadowGray);
+	}
+
+	.AboutPluses__card:nth-child(1) {
+		transform: rotate(-6deg) translateY(10px);
+		background: var(--red);
+	}
+
+	.AboutPluses__card:nth-child(2) {
+		transform: rotate(8deg) translateY(30px);
+		background: var(--carddark);
+	}
+
+	.AboutPluses__card:nth-child(3) {
+		transform: rotate(-2deg);
+		color: var(--dark);
+		background: var(--light);
+	}
+
+	.AboutPluses__card:nth-child(4) {
+		transform: rotate(10deg) translateY(30px);
+		background: var(--gray);
+	}
+
+	.AboutPluses__card:nth-child(5) {
+		transform: rotate(-4deg) translateY(10px);
+		background: var(--litered);
+	}
+
+	.AboutPluses__cards:hover {
+		gap: 10px;
+		* {
+			transform: none !important;
+		}
+	}
+
+	h3 {
+		font-size: 18px;
+		height: 48px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+}
+
+@media all and (max-width: 768px) {
+	section.AboutPluses {
+		padding: 60px 0;
+		h2 {
+			font-size: 28px;
+		}
+
+		.AboutPluses__card:nth-child(1) {
+			transform: rotate(-6deg) translate(0);
+			background: var(--red);
+		}
+
+		.AboutPluses__card:nth-child(2) {
+			transform: rotate(8deg) translate(0);
+			background: var(--carddark);
+		}
+
+		.AboutPluses__card:nth-child(3) {
+			transform: rotate(-2deg) translate(0);
+			color: var(--dark);
+			background: var(--light);
+		}
+
+		.AboutPluses__card:nth-child(4) {
+			transform: rotate(10deg) translate(0);
+			background: var(--gray);
+		}
+
+		.AboutPluses__card:nth-child(5) {
+			transform: rotate(-4deg) translate(0);
+			background: var(--litered);
+		}
+	}
+}

@@ -346,5 +346,68 @@
 		"videoTitle": "Videos with Our Clients",
 		"screenTitle": "Reviews",
 		"contentLink": "/reviews/reviews-en.json"
+	},
+	"aboutPage": {
+		"top": {
+			"title": "About Us",
+			"texts": [
+				"We are Brandify, a Ukrainian company that produces custom-designed socks.",
+				"Our story began with a small production facility, a big dream, and an unwavering desire to create a cool, high-quality product. Today, we are a team of creative, responsible, and slightly fanatical people who love what we do and know how to take a brand to the next level — even if it starts with a simple pair of socks.",
+				"We grew alongside our clients — becoming bolder, more confident, and more refined. Today, Brandify is not just a manufacturer, but a full-fledged partner capable of creating a product that works for your brand, tells your story, and evokes emotion.",
+				"We believe in the power of details. And we know that socks are more than just an accessory. They are a way to stand out, make a statement, create an emotion, or leave a lasting impression.",
+				"We work honestly, with quality and love — because that’s the only way we know how."
+			]
+		},
+		"pluses": {
+			"title": "Our Values",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Excellent Quality",
+					"text": "We use the finest certified materials and modern equipment to manufacture our socks.",
+					"image": "/images/about/cci-1.svg"
+				},
+				{
+					"id": 2,
+					"title": "Individual Approach",
+					"text": "We create the perfect design based on all client requests and take into account all technical details for the specific order.",
+					"image": "/images/about/cci-2.svg"
+				},
+				{
+					"id": 3,
+					"title": "Reliability",
+					"text": "We never promise more than we can deliver. But everything we promise — we deliver without compromise.",
+					"image": "/images/about/cci-3.svg"
+				},
+				{
+					"id": 4,
+					"title": "Accessibility and Simplicity",
+					"text": "We create a service that is easy to understand, pleasant to order from, and one you’ll want to return to again.",
+					"image": "/images/about/cci-4.svg"
+				},
+				{
+					"id": 5,
+					"title": "Feedback",
+					"text": "We truly listen and value your feedback. Every comment is an opportunity to become better.",
+					"image": "/images/about/cci-5.svg"
+				}
+			]
+		},
+		"story": {
+			"title": "Our Short Story",
+			"texts": [
+				"Our company began with the idea of creating not just socks, but a stylish and high-quality accessory that highlights brand individuality.",
+				"Thanks to a professional team and continuous growth, we have established ourselves as a reliable partner for many companies and stores. Today, we work with various clients — from small brands to large corporations — creating products that combine quality, comfort, and style."
+			]
+		},
+		"teams": {
+			"title": "Our Team",
+			"contentLink": "/about/teams-en.json"
+		},
+		"machines": {
+			"title": "Production Overview",
+			"text": "Our production is equipped with modern high-tech machinery that ensures precise knitting, quality design application, and long-lasting socks. We also have equipment for making labels and packaging, allowing us to produce a full-cycle product.",
+			"contentLink": "/about/machines-en.json"
+		}
 	}
 }

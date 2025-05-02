@@ -53,7 +53,7 @@ const Navigation = ({ isPanel, openPanel, setOpenPanel, setOpenedBurgerMenu }) =
 			</li>
 
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toAbout")}</Link>
+				<Link href="/about" className="navigation__link" onClick={handleCloseModal}>{tNav("toAbout")}</Link>
 			</li>
 
 			<li className="navigation__item">

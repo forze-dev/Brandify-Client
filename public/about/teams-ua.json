@@ -1,0 +1,32 @@
+[
+	{
+		"id": "tt-1",
+		"photo": "/images/about/tt-1.png",
+		"name": "Кузьмак Марко",
+		"position": "Директор"
+	},
+	{
+		"id": "tt-2",
+		"photo": "/images/about/tt-1.png",
+		"name": "Кузьмак Марко",
+		"position": "Директор"
+	},
+	{
+		"id": "tt-3",
+		"photo": "/images/about/tt-1.png",
+		"name": "Кузьмак Марко",
+		"position": "Директор"
+	},
+	{
+		"id": "tt-4",
+		"photo": "/images/about/tt-1.png",
+		"name": "Кузьмак Марко",
+		"position": "Директор"
+	},
+	{
+		"id": "tt-5",
+		"photo": "/images/about/tt-1.png",
+		"name": "Кузьмак Марко",
+		"position": "Директор"
+	}
+]
