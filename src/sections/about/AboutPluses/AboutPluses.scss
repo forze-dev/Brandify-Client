@@ -104,5 +104,10 @@ section.AboutPluses {
 			transform: rotate(-4deg) translate(0);
 			background: var(--litered);
 		}
+
+		.AboutPluses__cards,
+		.AboutPluses__cards:hover {
+			gap: 8px;
+		}
 	}
 }
