@@ -1,0 +1,136 @@
+.Machines {
+	h2 {
+		font-size: 40px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.swiper-slide {
+		border-radius: 20px;
+		overflow: hidden;
+		width: 420px;
+	}
+
+	.video-slider__item {
+		height: 100%;
+		border-radius: 20px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.video-overlay {
+		display: none;
+	}
+
+	.video-overlay.show {
+		display: block;
+		background: transparent;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 25%;
+		z-index: 3;
+	}
+
+	.video-overlay-1.show {
+		top: 17%;
+	}
+
+	.video-overlay-2.show {
+		height: 20%;
+		bottom: 21%;
+	}
+
+	.video-poster {
+		width: 100%;
+		height: 100%;
+		transition: all 0.3s;
+		opacity: 1;
+		position: relative;
+		z-index: 3;
+	}
+
+	.video-poster.hide {
+		opacity: 0;
+		z-index: 2;
+	}
+
+	.video-slider__item-frame {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		opacity: 0;
+
+		.iframe-wrapper {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			pointer-events: none; // 👈 важливо: не блокує свайп
+
+			iframe {
+				width: 100%;
+				height: 100%;
+				pointer-events: auto; // 👈 але iframe працює
+			}
+		}
+	}
+
+	.video-slider__item-frame.show {
+		opacity: 1;
+	}
+
+	.video-slider__item::after {
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: 30px solid transparent;
+		border-bottom: 30px solid transparent;
+		border-left: 40px solid white;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.video-slider__item-bottom {
+		position: absolute;
+		bottom: 0;
+		padding: 20px;
+		background: rgba(0, 0, 0, 0.6);
+		color: white;
+		width: 100%;
+	}
+
+	.Machines__wrapper {
+		max-width: 1300px;
+		margin: 0 auto;
+
+		.Machines__card {
+			height: 480px;
+			margin: 0 auto;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.Machines {
+		h2 {
+			font-size: 28px;
+		}
+		.swiper-slide {
+			width: 80%;
+		}
+	}
+}

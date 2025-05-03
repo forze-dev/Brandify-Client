@@ -1,0 +1,45 @@
+{
+	"content": [
+		{
+			"id": "mac-1",
+			"type": "image",
+			"link": "/images/about/1.webp"
+		},
+		{
+			"id": "mac-2",
+			"type": "image",
+			"link": "/images/about/2.webp"
+		},
+		{
+			"id": "mac-3",
+			"type": "video",
+			"poster": "/images/about/mm-poster.webp",
+			"link": "https://www.youtube.com/watch?v=doZzUKHYFj8"
+		},
+		{
+			"id": "mac-4",
+			"type": "image",
+			"link": "/images/about/4.webp"
+		},
+		{
+			"id": "mac-5",
+			"type": "image",
+			"link": "/images/about/5.webp"
+		},
+		{
+			"id": "mac-6",
+			"type": "image",
+			"link": "/images/about/6.webp"
+		},
+		{
+			"id": "mac-7",
+			"type": "image",
+			"link": "/images/about/7.webp"
+		},
+		{
+			"id": "mac-8",
+			"type": "image",
+			"link": "/images/about/8.webp"
+		}
+	]
+}

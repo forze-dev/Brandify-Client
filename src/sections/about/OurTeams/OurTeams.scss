@@ -1,0 +1,36 @@
+.OurTeams {
+	padding: 100px 0;
+	background: var(--grayLight);
+	text-align: center;
+	h2 {
+		font-size: 40px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	h3 {
+		font-size: 20;
+		font-weight: 500;
+		margin: 10px 0 6px 0;
+	}
+	span {
+		color: var(--gray);
+	}
+
+	.OurTeams-swiper {
+		.swiper-wrapper {
+			padding-bottom: 40px;
+		}
+
+		.swiper-pagination-bullet {
+			background: var(--red);
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.OurTeams {
+		h2 {
+			font-size: 28px;
+		}
+	}
+}
