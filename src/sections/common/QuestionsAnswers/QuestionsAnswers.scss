@@ -6,8 +6,19 @@ section.QuestionsAnswers {
 	}
 
 	.QuestionsAnswers__list {
-		column-count: 2;
-		column-gap: 16px;
+		display: flex;
+		margin-left: -16px; /* або -column-gap */
+		width: auto;
+	}
+
+	.QuestionsAnswers__list > div {
+		padding-left: 16px; /* такий самий як gap */
+		background-clip: padding-box;
+	}
+
+	/* Стилі елементів всередині колонки */
+	.QuestionsAnswers__list > div > .QuestionsAnswers__box {
+		margin-bottom: 16px;
 	}
 
 	.QuestionsAnswers__box {

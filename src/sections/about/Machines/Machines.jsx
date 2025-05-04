@@ -96,7 +96,7 @@ const Machines = () => {
 								}
 							}}
 							modules={[EffectCoverflow]}
-							className="hero__slider-swiper"
+							className="Machines__slider-swiper"
 						>
 							{
 								allMachines && allMachines.content.map((el, index) => {

@@ -1,5 +1,6 @@
 "use client"
 
+import Masonry from "react-masonry-css"
 import { useTranslations } from "next-intl"
 import "./QuestionsAnswers.scss"
 
@@ -9,11 +10,17 @@ const QuestionsAnswers = () => {
 
 	const tQAList = tQA.raw("list")
 
+	const breakpointColumnsObj = {
+		default: 2,
+		768: 1
+	};
+
+
 	return (
 		<section className="QuestionsAnswers">
 			<div className="container">
 				<h2>{tQA("title")}</h2>
-				<div className="QuestionsAnswers__list">
+				<Masonry breakpointCols={breakpointColumnsObj} className="QuestionsAnswers__list">
 					{
 						tQAList && tQAList.map(questAnsw => {
 							return (
@@ -29,7 +36,7 @@ const QuestionsAnswers = () => {
 							)
 						})
 					}
-				</div>
+				</Masonry>
 			</div>
 		</section>
 	)

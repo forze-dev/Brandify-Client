@@ -28,7 +28,7 @@ const OurWorks = () => {
 						})
 					}
 				</div>
-				<Link href={"/"} className='btn-second '>{tCommon("btn4")}</Link>
+				<Link href={"/our-works"} className='btn-second '>{tCommon("btn4")}</Link>
 			</div>
 		</section>
 	)
