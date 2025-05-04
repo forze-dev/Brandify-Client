@@ -4,6 +4,7 @@ import AboutPluses from '@/sections/about/AboutPluses/AboutPluses';
 import ShortStory from '@/sections/about/ShortStory/ShortStory';
 import OurTeams from '@/sections/about/OurTeams/OurTeams';
 import Machines from '@/sections/about/Machines/Machines';
+import AboutForm from '@/sections/about/AboutForm/AboutForm';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -29,6 +30,7 @@ export default function ReviewsPage() {
 			<ShortStory />
 			<OurTeams />
 			<Machines />
+			<AboutForm />
 		</main>
 	);
 }

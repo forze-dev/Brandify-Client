@@ -1,0 +1,18 @@
+.AboutForm {
+	.AboutForm__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.AboutForm__form {
+		max-width: 830px;
+	}
+
+	.AboutForm__image {
+		max-width: 410px;
+		width: 100%;
+		height: auto;
+	}
+}
