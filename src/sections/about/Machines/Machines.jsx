@@ -105,7 +105,8 @@ const Machines = () => {
 											<div className="Machines__card">
 												{
 													el.type === "image" ?
-														<Image src={el.link} alt="photo" width={260} height={380} />
+														<img src={el.link} alt="photo" width={260} height={380} />
+														// <Image src={el.link} alt="photo" width={260} height={380} />
 														: <div
 															className="video-slider__item"
 														>
