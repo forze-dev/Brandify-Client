@@ -64,19 +64,19 @@ const Hero = () => {
 						className="hero__slider-swiper"
 					>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (1).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (1).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (2).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (2).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (3).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (3).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (4).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (4).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (5).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (5).webp"} />
 						</SwiperSlide>
 					</Swiper>
 				</div>
@@ -95,19 +95,19 @@ const Hero = () => {
 						}}
 					>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (1).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (1).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (2).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (2).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (3).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (3).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (4).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (4).webp"} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image width={284} height={300} alt="Photo" src={"/images/home/hs (5).webp"} />
+							<img width={284} height={300} alt="Photo" src={"/images/home/hs (5).webp"} />
 						</SwiperSlide>
 					</Swiper>
 				</div>
