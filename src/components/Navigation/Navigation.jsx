@@ -61,7 +61,7 @@ const Navigation = ({ isPanel, openPanel, setOpenPanel, setOpenedBurgerMenu }) =
 			</li>
 
 			<li className="navigation__item">
-				<Link href="/" className="navigation__link" onClick={handleCloseModal}>{tNav("toJob")}</Link>
+				<Link href="/cooperation" className="navigation__link" onClick={handleCloseModal}>{tNav("toJob")}</Link>
 			</li>
 		</ul>
 	)

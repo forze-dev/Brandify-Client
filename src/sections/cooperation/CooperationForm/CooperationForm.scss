@@ -1,0 +1,33 @@
+.CooperationForm {
+	padding-top: 40px;
+	.CooperationForm__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+	}
+
+	.CooperationForm__form {
+		max-width: 830px;
+	}
+
+	.CooperationForm__image {
+		max-width: 400px;
+		width: 100%;
+		height: auto;
+		max-height: 500px;
+		object-fit: contain;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.CooperationForm {
+		.CooperationForm__wrapper {
+			gap: 30px;
+			flex-direction: column-reverse;
+		}
+		.CooperationForm__image {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.CooperationCompanies {
+	h2 {
+		font-size: 28px;
+		color: var(--gray);
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.CooperationCompanies__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 50px;
+	}
+}
+@media all and (max-width: 768px) {
+	.CooperationCompanies {
+		h2 {
+			font-size: 22px;
+		}
+
+		.CooperationCompanies__list {
+			gap: 30px;
+		}
+	}
+}

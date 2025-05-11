@@ -96,7 +96,84 @@
 		]
 	},
 	"companiesList": {
-		"title": "Companies we work with:"
+		"title": "Companies we work with:",
+		"list": [
+			{
+				"id": 1,
+				"src": "/icons/companies (1).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 3,
+				"src": "/icons/companies (3).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 4,
+				"src": "/icons/companies (4).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 2,
+				"src": "/icons/companies (2).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 5,
+				"src": "/icons/companies (5).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 6,
+				"src": "/icons/companies (6).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 7,
+				"src": "/icons/companies (7).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 8,
+				"src": "/icons/companies (8).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 9,
+				"src": "/icons/companies (9).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 10,
+				"src": "/icons/companies (10).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 11,
+				"src": "/icons/companies (11).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 12,
+				"src": "/icons/companies (12).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 13,
+				"src": "/icons/companies (13).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 14,
+				"src": "/icons/companies (14).svg",
+				"alt": "logo"
+			},
+			{
+				"id": 15,
+				"src": "/icons/companies (15).svg",
+				"alt": "logo"
+			}
+		]
 	},
 	"footer": {
 		"privacy": "Brandify 2025 © All rights reserved",
@@ -408,6 +485,31 @@
 			"title": "Production Overview",
 			"text": "Our production is equipped with modern high-tech machinery that ensures precise knitting, quality design application, and long-lasting socks. We also have equipment for making labels and packaging, allowing us to produce a full-cycle product.",
 			"contentLink": "/about/machines-en.json"
+		}
+	},
+	"cooperationPage": {
+		"top": {
+			"title": "We create unique socks for your business!",
+			"texts": [
+				"Your product can be as unique as your brand. Join our partnership program, and together we'll create something special."
+			]
+		},
+		"schema": {
+			"title": "Cooperation process:",
+			"list": [
+				"We send samples so you can evaluate the quality of our products.",
+				"We agree on the sock type, material, quantity, and model size.",
+				"We develop a visualization of your print (logo) and make adjustments.",
+				"Payment and development of a sample, with edits made until approved.",
+				"We send the sample to you for approval via Nova Poshta or Ukrposhta.",
+				"We agree on the sock type, material, quantity, and model size.",
+				"Prepayment.",
+				"Once approved, we proceed with the order.",
+				"We design a label layout if needed.",
+				"Packaging of the completed order.",
+				"Full payment for the order.",
+				"We send the socks to you."
+			]
 		}
 	}
 }

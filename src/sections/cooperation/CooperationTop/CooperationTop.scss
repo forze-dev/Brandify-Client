@@ -1,0 +1,49 @@
+section.CooperationTop {
+	margin: 60px 0;
+	.CooperationTop__wrapper {
+		display: flex;
+		gap: 40px;
+		align-items: center;
+	}
+
+	img {
+		max-width: 40%;
+		width: 100%;
+		height: auto;
+		border-radius: 20px;
+		flex-shrink: 0;
+	}
+
+	h1 {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	.CooperationTop__content-text {
+		p {
+			font-size: 16px;
+			margin: 8px 0;
+		}
+	}
+
+	.btn {
+		margin-top: 30px;
+	}
+}
+
+@media all and (max-width: 768px) {
+	section.CooperationTop {
+		.CooperationTop__wrapper {
+			flex-direction: column-reverse;
+			gap: 30px;
+		}
+		img {
+			max-width: 100%;
+			max-height: 400px;
+			object-fit: cover;
+		}
+		h1 {
+			font-size: 28px;
+		}
+	}
+}
