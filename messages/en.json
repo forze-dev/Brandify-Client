@@ -70,27 +70,27 @@
 		"drop1": [
 			{
 				"id": 1,
-				"path": "",
-				"label": "Business socks"
+				"path": "/products/commercial-socks",
+				"label": "Commercial Socks"
 			},
 			{
 				"id": 2,
-				"path": "",
+				"path": "/products/corporate-socks",
 				"label": "Corporate socks"
 			},
 			{
 				"id": 3,
-				"path": "",
+				"path": "/products/sports-socks",
 				"label": "Sports socks"
 			},
 			{
 				"id": 4,
-				"path": "",
+				"path": "/products/children-socks",
 				"label": "Kids socks"
 			},
 			{
 				"id": 5,
-				"path": "",
+				"path": "/products/all-categories",
 				"label": "All categories"
 			}
 		]
@@ -511,5 +511,17 @@
 				"We send the socks to you."
 			]
 		}
+	},
+	"productsPage": {
+		"title": "Custom Socks Made Simple",
+		"contentLink": "/products/products_ua.json",
+		"titleInd": "Individual Packaging",
+		"descrInd": [
+			"Individual packaging is a part of your brand.",
+			"We create personalized labels for socks that highlight style, identity, and attention to detail.",
+			"The label can include your logo, slogan, contact information, or a short message for the customer.",
+			"It not only protects the product but also creates a first impression — and makes your product recognizable at first glance.",
+			"Each label is tailored to your brand: style, colors, shape, and format — everything as you wish."
+		]
 	}
 }

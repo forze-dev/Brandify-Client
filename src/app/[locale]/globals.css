@@ -39,6 +39,11 @@ body.fixed-body {
 	padding-right: 8px;
 }
 
+.root {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
 @media (max-width: 1024px) and (pointer: coarse) {
 	body.fixed-body {
 		overflow: hidden;

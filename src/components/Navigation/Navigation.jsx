@@ -13,6 +13,7 @@ const Navigation = ({ isPanel, openPanel, setOpenPanel, setOpenedBurgerMenu }) =
 	const tDrops = useTranslations('dropdowns');
 
 	const handleCloseModal = () => {
+		console.log("object");
 		setOpenedBurgerMenu && setOpenedBurgerMenu(false)
 	}
 
